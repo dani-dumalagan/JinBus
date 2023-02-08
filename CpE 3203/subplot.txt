@@ -1,0 +1,8 @@
+act1Number5AnswerASubplot = subplot (2, 1, 1) 
+act1Number5AnswerAPlot = plot (act1Number4aX, act1Number4AnsweraPVal)
+act1Number5AnswerATitle = title(act1Number5AnswerASubplot,'5.a Plot of the Quadratic Function')
+
+% 5. b. Subplot
+act1Number5AnswerBSubplot = subplot (2, 1, 2)
+act1Number5AnswerBPlot = plot (act1Number4aX, act1Number4AnswerbPVal)
+act1Number5AnswerBTitle = title(act1Number5AnswerBSubplot,'5.b Plot of the Cubic Function')

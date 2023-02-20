@@ -1,0 +1,17 @@
+# Build the model
+model = tf.keras.Sequential()
+
+model.add(Conv2D(16, (3, 3), 1, activation='relu', input_shape=(32, 32, 3)))
+model.add(MaxPooling2D())
+
+model.add(Conv2D(32, (3, 3), 1, activation='relu'))
+model.add(MaxPooling2D())
+
+# flatten since too many dimensions, we only want a classification output
+model.add(Flatten())
+# fully connected to get all relevant data
+model.add(Dense(128, activation='relu'))
+# output a softmax to squash the matrix into output probabilities
+model.add(Dense(100, activation='softmax'))
+
+model.summary()

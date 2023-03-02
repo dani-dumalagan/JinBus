@@ -279,18 +279,13 @@ unsigned char logicalXOR(unsigned char a, unsigned char b) {
 }
 
 unsigned char logicalShiftRight(unsigned char currentBits, unsigned char b) {
-	int bitLength = getBitLength(b);
-	
-	currentBits = currentBits >> bitLength;
-	b = b << arithmeticSubtraction(0x08,bitLength);
-	return logicalOR(currentBits,b);		
+	return currentBits >> b;	
 }
 
 unsigned char logicalShiftLeft(unsigned char currentBits, unsigned char b) {
 	int bitLength = getBitLength(b);
 	
-	currentBits = currentBits << bitLength;
-	return logicalOR(currentBits,b);
+	return currentBits << b;
 }
 
 int getBitLength(unsigned a) {

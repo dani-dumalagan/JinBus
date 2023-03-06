@@ -39,13 +39,13 @@ int main() {
     
 	ALU(0x04,0x02,0x01); // Addition
 	ALU(0x04,0x02,0x02); // Subtraction
-	ALU(0x06,0x02,0x03); // Multiplication
+	ALU(0x09,0x03,0x03); // Multiplication
 	ALU(0x04,0x02,0x04); // AND
 	ALU(0x04,0x02,0x05); // OR
 	ALU(0x04,0x02,0x06); // NOT
 	ALU(0x04,0x02,0x07); // XOR
-	ALU(0x04,0x02,0x08); // Shift Right
-	ALU(0x02,0x60,0x09); // Shift Left
+	ALU(0xFF,0x03,0x08); // Shift Right
+	ALU(0xFF,0x06,0x09); // Shift Left
     return 0;
 }
 
@@ -170,11 +170,11 @@ unsigned char setFlags (unsigned int ACC) {
 }
 
 // Print binary characters of data
-void printBin (int data, unsigned char data_width) {
+void printBin(int data, unsigned char data_width) {
 	int i;
 	int bit;
 	
-	for(i = (int)data_width-1; i>=0; i--) {
+	for (i=(int)data_width-1; i>=0; i--) {
 		bit = data >> i;
 		if (logicalAND(bit,0x01))
 			printf("1");
@@ -184,8 +184,8 @@ void printBin (int data, unsigned char data_width) {
 }
 
 // Arithmetic functions
-unsigned char arithmeticAddition(unsigned char a, unsigned char b) {
-	return a + b;
+unsigned char arithmeticAddition(unsigned char op1, unsigned char op2) {
+	return op1 + op2;
 }
 
 unsigned char arithmeticSubtraction(unsigned char minuend, unsigned char subtrahend) {
@@ -262,46 +262,39 @@ unsigned char getMSB_8bit (unsigned char data) {
 }
 
 // Logical functions
-unsigned char logicalAND(unsigned char a, unsigned char b) {
-	return a & b;
+unsigned char logicalAND(unsigned char op1, unsigned char op2) {
+	return op1 & op2;
 }
 
-unsigned char logicalOR(unsigned char a, unsigned char b) {
-	return a | b;
+unsigned char logicalOR(unsigned char op1, unsigned char op2) {
+	return op1 | op2;
 }
 
-unsigned char logicalNOT(unsigned char a) {
-	return ~(a);
+unsigned char logicalNOT(unsigned char op) {
+	return ~(op);
 }
 
-unsigned char logicalXOR(unsigned char a, unsigned char b) {
-	return a ^ b;
+unsigned char logicalXOR(unsigned char op1, unsigned char op2) {
+	return op1 ^ op2;
 }
 
-unsigned char logicalShiftRight(unsigned char currentBits, unsigned char b) {
-	int bitLength = getBitLength(b);
-	
-	currentBits = currentBits >> bitLength;
-	b = b << arithmeticSubtraction(0x08,bitLength);
-	return logicalOR(currentBits,b);		
+unsigned char logicalShiftRight(unsigned char currentBits, unsigned char numberOfShifts) {
+	return currentBits >> numberOfShifts;	
 }
 
-unsigned char logicalShiftLeft(unsigned char currentBits, unsigned char b) {
-	int bitLength = getBitLength(b);
-	
-	currentBits = currentBits << bitLength;
-	return logicalOR(currentBits,b);
+unsigned char logicalShiftLeft(unsigned char currentBits, unsigned char numberOfShifts) {	
+	return currentBits << numberOfShifts;
 }
 
-int getBitLength(unsigned a) {
+int getBitLength(unsigned data) {
 	int numberOfBits = 8;
 	
 	while (numberOfBits != 0) { 
-		if (logicalAND(a,0x80) == 0x80)
+		if (logicalAND(data,0x80) == 0x80)
 			return numberOfBits;
 		else {
 			numberOfBits--;
-			a = a << 0x01;
+			data = data << 0x01;
 		}
 	}
 }

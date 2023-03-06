@@ -89,7 +89,7 @@ int CU(void) {
 		printf("\nOperand\t\t  : 0x%03X", operand);
 		printf("\nInstruction\t  : ");
 	
-		/* WM instruction (write to memory) */
+		/* WM instruction (write to memory given a memory address) */
 		if (inst_code == WM) {	
 			printf("WM");
 			MAR = operand; 				// load the operand of WM (memory address) to MAR
@@ -97,7 +97,7 @@ int CU(void) {
 			printf("\nWriting data to memory...");
 			getch();
 		}
-		/* RM instruction (read from memory) */
+		/* RM instruction (read from memory given a memory address) */
 		else if (inst_code == RM) {
 			printf("RM");
 			MAR = operand;
@@ -113,7 +113,7 @@ int CU(void) {
 			printf("\nBranch to 0x%03X on next cycle", PC);
 			getch();
 		}
-		/* RIO instruction (read from IO buffer) */
+		/* RIO instruction (read from IO buffer given a memory address) */
 		else if (inst_code == RIO){
 			printf("RIO");
 			IOAR = operand;
@@ -122,7 +122,7 @@ int CU(void) {
 			printf("\nIOBR\t\t  : 0x%02X", IOBR);
 			getch();
 		}
-		/* WIO instruction (write to IO buffer) */
+		/* WIO instruction (write to IO buffer given a memory address) */
 		else if (inst_code == WIO) { 
 			printf("WIO");
 			IOAR = operand; 		// load the operand of WIO (memory address) to IOAR

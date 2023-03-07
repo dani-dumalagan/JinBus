@@ -1,0 +1,11 @@
+___awdiv: CODE, 311 0 93
+_delay: CODE, 611 0 53
+_ISR: CODE, 483 0 66
+___awmod: CODE, 404 0 79
+_main: CODE, 39 0 272
+_instCtrl: CODE, 704 0 19
+_dataCtrl: CODE, 723 0 19
+__initialization: CODE, 21 0 14
+___lwdiv: CODE, 549 0 62
+_initLCD: CODE, 664 0 40
+Total: 717

@@ -19,12 +19,6 @@ void initMemory(void);
 unsigned char dataMemory[2048];
 unsigned char ioBuffer[32];
 
-unsigned int ADDR = 0x000; 
-unsigned char BUS = 0x00; 	
-unsigned char CONTROL = 0x00;
-unsigned char IOM = 0x00;
-unsigned char RW = 0x00;
-
 // Main function
 int main(void) {
 	initMemory(); 	// this function populates the memory
@@ -72,11 +66,6 @@ int CU(void) {
     unsigned char inst_code = 0x00;	// 5-bit instruction code
     unsigned int operand = 0x000; 	// 11-bit operand
     int exitCode = 0;
-    
-    // Internal control signals
-    int Fetch;
-	int IO;
-	int Memory;
     
     while (!exitCode) {
     	

@@ -141,8 +141,8 @@ int CU(void) {
 		}
 		/* WIB instruction (write data to IOBR) */
 		else if (inst_code == WIB) {
-			printf("\nLoading data to IOBR...");
 			printf("WIB");
+			printf("\nLoading data to IOBR...");
 			IOBR = dataMemory[PC-1];
 			printf("\nMBR\t\t  : 0x%02X", IOBR);
 			getch();

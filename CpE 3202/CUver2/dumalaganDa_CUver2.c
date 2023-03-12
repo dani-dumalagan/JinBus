@@ -14,16 +14,40 @@
 // Function prototypes
 int CU(void);
 void initMemory(void);
+void MainMemory(void);
+void IOMemory(void);
 
 // Global variables
 unsigned char dataMemory[2048];
 unsigned char ioBuffer[32];
 
+// Buses
 unsigned int ADDR = 0x000; 
 unsigned char BUS = 0x00; 	
+
+// External control signals
 unsigned char CONTROL = 0x00;
 int IOM = 0;
 int RW = 0;
+int OE = 0;
+
+void MainMemory(void) {
+	if (IOM == 1) {
+		if (RW == 0 && OE == 1) 		// memory read
+			BUS = dataMemory[ADDR];
+		else if (RW == 1 && OE == 1) 	// memory write
+			dataMemory[ADDR] = BUS;
+	}
+}
+
+void IOMemory(void) {
+	if (IOM == 0) {
+		if (RW == 0 && OE == 1) 		// I/O read
+			BUS = ioBuffer[ADDR];
+		else if (RW == 1 && OE == 1) 	// I/O write
+			ioBuffer[ADDR] = BUS;
+	}
+}
 
 // Main function
 int main(void) {
@@ -74,15 +98,14 @@ int CU(void) {
     int exitCode = 0;
     
     // Internal control signals
-    int Fetch;
-	int IO;
-	int Memory;
-	int OE;
+    int Fetch = 0;
+	int IO = 0;
+	int Memory = 0;
     
     while (!exitCode) {
     	
     	printf("\n-----------------------------");
-    	
+    	printf("\nPC\t\t  : 0x%03X", PC);
 		/* Setting external control signals */
 		CONTROL = inst_code;	// setting the control signals
 		IOM = 1; 				// Main Memory access
@@ -110,6 +133,7 @@ int CU(void) {
 			PC++; 			// points to the next instruction
 		}
 		/* Instruction Decode */
+		printf("\nIR\t\t  : 0x%04X", IR);
 
 		/* Decoding instruction */
 		inst_code = IR >> 11; 	// get the 5-bit instruction code
@@ -117,6 +141,7 @@ int CU(void) {
 		printf("\nOperand\t\t  : 0x%03X", operand);
 		printf("\nInstruction\t  : ");
 	
+
 		/* WM instruction (write to memory given a memory address) */
 		if (inst_code == WM) {	
 			printf("WM");
@@ -133,73 +158,160 @@ int CU(void) {
 			RW = 1; 				// write operation
 			OE = 1; 				// allow data movement to/from memory
 
-			printf("\nWriting data to memory...");
+			printf("\n\nWriting data to memory...");
 			ADDR = MAR; 			// load MAR to Address Bus
 			if (Memory)
 				BUS = MBR; 			// MBR owns the bus since control signal Memory is 1
 			MainMemory(); 			// write data in data bus to memory
-			
-			/* Echo */
-			
-			getch();
 		}
+
+
 		/* RM instruction (read from memory given a memory address) */
 		else if (inst_code == RM) {
 			printf("RM");
 			MAR = operand;
-			printf("\nReading data from memory...");
 
 			/* Setting local control signals */
 			Fetch = 0;
 			Memory = 1; 			// accessing memory
 			IO = 0;		
 
-
-			MBR = dataMemory[MAR];
+			/* Setting external control signals */
+			CONTROL = inst_code; 	// setting the control signals
+			IOM = 1; 				// Main Memory access
+			RW = 0; 				// read operation
+			OE = 1; 				// allow data movement to/from memory
+			
+			printf("\n\nReading data from memory...");
+			ADDR = MAR; 			// load MAR to Address Bus
+			MainMemory(); 			
+			if (Memory)
+				BUS = MBR; 			// MBR owns the bus since control signal Memory is 1
+			
+			/* Echo */
 			printf("\nMBR\t\t  : 0x%02X", MBR);
-			getch();
 		}
+
+
 		/* BR instruction (branch) */
 		else if (inst_code == BR) {
 			printf("BR");
 			PC = operand;
-			printf("\nBranch to 0x%03X on next cycle", PC);
+			CONTROL = inst_code;
+			OE = 1;
+			
+			/* Echo */
+			printf("\n\nBranch to 0x%03X on next cycle", PC);
 			getch();
 		}
-		/* RIO instruction (read from IO buffer given a memory address) */
+
+
+		/* RIO instruction (read from I/O buffer given a memory address) */
 		else if (inst_code == RIO){
 			printf("RIO");
 			IOAR = operand;
-			printf("\nReading from IO buffer...");
-			IOBR = ioBuffer[IOAR];
+
+			/* Setting local control signals */
+			Fetch = 0;
+			Memory = 0; 			
+			IO = 1;					// accessing I/O		
+
+			/* Setting external control signals */
+			CONTROL = inst_code; 	// setting the control signals
+			IOM = 0; 				// I/O access
+			RW = 0; 				// read operation
+			OE = 1; 				// allow data movement to/from memory
+			
+			printf("\n\nReading from I/O buffer...");
+			ADDR = IOAR; 			// load IOAR to Address Bus
+			IOMemory(); 			
+			if (IO)
+				IOBR = BUS; 			// IOBR owns the bus since control signal Memory is 1
+
+			/* Echo */
 			printf("\nIOBR\t\t  : 0x%02X", IOBR);
-			getch();
 		}
+
+
 		/* WIO instruction (write to IO buffer given a memory address) */
 		else if (inst_code == WIO) { 
 			printf("WIO");
 			IOAR = operand; 		// load the operand of WIO (memory address) to IOAR
-			printf("\nWriting to IO buffer...");
-			ioBuffer[IOAR] = IOBR; 	// data in IOBR is written to memory address pointed to by IOAR
+
+			/* Setting local control signals */
+			Fetch = 0;
+			Memory = 0; 			
+			IO = 1;					// accessing I/O		
+
+			/* Setting external control signals */
+			CONTROL = inst_code; 	// setting the control signals
+			IOM = 0; 				// I/O access
+			RW = 1; 				// write operation
+			OE = 1; 				// allow data movement to/from memory
+			
+			printf("\n\nWriting to IO buffer...");
+			ADDR = IOAR; 			// load IOAR to Address Bus
+			if (IO)
+				BUS = IOBR; 			// IOBR owns the bus since control signal Memory is 1
+			IOMemory(); 			
+
+			/* Echo */
 			printf("\nIOBR\t\t  : 0x%02X", IOBR);
-			getch();
 		}
+
+
 		/* WB instruction (write data to MBR) */
 		else if (inst_code == WB) {
 			printf("WB");
-			printf("\nLoading data to MBR...");
-			MBR = dataMemory[PC-1];
-			printf("\nMBR\t\t  : 0x%02X", MBR);
-			getch();
+			
+			/* Setting local control signals */
+			Fetch = 0;
+			Memory = 1; 			// accessing memory
+			IO = 0;
+		
+			/* Setting external control signals */
+			CONTROL = inst_code; 	// setting the control signals
+			IOM = 1; 				// Main Memory access
+			RW = 1; 				// write operation
+			OE = 1; 				// allow data movement to/from memory
+
+			printf("\n\nLoading data to MBR...");
+			ADDR = PC-1; 			
+			MainMemory(); 			// write data in data bus to memory
+			if (Memory)
+				MBR = BUS; 			// MBR owns the bus since control signal Memory is 1
+			
+			/* Echo */
+			printf("\nMBR\t\t  : 0x%02X", MBR);	
 		}
+
+
 		/* WIB instruction (write data to IOBR) */
 		else if (inst_code == WIB) {
-			printf("\nLoading data to IOBR...");
 			printf("WIB");
-			IOBR = dataMemory[PC-1];
-			printf("\nMBR\t\t  : 0x%02X", IOBR);
-			getch();
+
+			/* Setting local control signals */
+			Fetch = 0;
+			Memory = 0; 			
+			IO = 1;					// accessing I/O
+		
+			/* Setting external control signals */
+			CONTROL = inst_code; 	// setting the control signals
+			IOM = 0; 				// I/O access
+			RW = 1; 				// write operation
+			OE = 1; 				// allow data movement to/from memory
+
+			printf("\n\nLoading data to IOBR...");
+			ADDR = PC-1; 			
+			if (IO)
+				IOBR = BUS; 			// IOBR owns the bus since control signal I/O is 1
+			IOMemory(); 			// write data in data bus to memory
+			
+			/* Echo */
+			printf("\nIOBR\t\t  : 0x%02X", IOBR);
 		}
+
+
 		/* EOP instruction (end of program) */
 		else if (inst_code == EOP) {
 			printf("EOP");
@@ -208,5 +320,15 @@ int CU(void) {
 			getch();	
 			return exitCode;		
 		}
+		
+		printf("\n\nBUS\t\t  : 0x%02X", BUS);
+		printf("\nADDR\t\t  : 0x%03X", ADDR);
+		printf("\nPC\t\t  : 0x%03X", PC);
+		printf("\nMAR\t\t  : 0x%02X", MAR);
+		printf("\nIOAR\t\t  : 0x%02X", IOAR);
+		printf("\nIOBR\t\t  : 0x%02X", IOBR);
+		printf("\nCONTROL\t\t  : 0x%02X", CONTROL);
+		getch();
+		
 	}
 }

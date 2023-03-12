@@ -28,16 +28,16 @@ void MainMemory() {
 		if (RW == 0 && OE == 1) 		// memory read
 			BUS = dataMemory[ADDR];
 		else if (RW == 1 && OE == 1) 	// memory write
-			MainMemory[ADDR] = BUS;
+			dataMemory[ADDR] = BUS;
 	}
 }
 
 void IOMemory() {
-	if (IOM == 1) {
-		if (RW == 0 && OE == 1) 		// memory read
-			BUS = dataMemory[ADDR];
-		else if (RW == 1 && OE == 1) 	// memory write
-			MainMemory[ADDR] = BUS;
+	if (IOM == 0) {
+		if (RW == 0 && OE == 1) 		// I/O read
+			BUS = ioBuffer[ADDR];
+		else if (RW == 1 && OE == 1) 	// I/O write
+			ioBuffer[ADDR] = BUS;
 	}
 }
 

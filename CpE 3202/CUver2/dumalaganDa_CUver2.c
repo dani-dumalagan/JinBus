@@ -85,6 +85,9 @@ void initMemory(void) {
 	dataMemory[0x12F] = 0x00;
 }
 
+
+
+
 // Control unit function
 int CU(void) {
     unsigned int PC = 0x000; 		// Program counter
@@ -186,7 +189,7 @@ int CU(void) {
 			ADDR = MAR; 			// load MAR to Address Bus
 			MainMemory(); 			
 			if (Memory)
-				BUS = MBR; 			// MBR owns the bus since control signal Memory is 1
+				MBR = BUS; 			// MBR owns the bus since control signal Memory is 1
 			
 			/* Echo */
 			printf("\nMBR\t\t  : 0x%02X", MBR);

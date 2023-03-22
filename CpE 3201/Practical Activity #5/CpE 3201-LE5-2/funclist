@@ -1,0 +1,21 @@
+___ftneg: CODE, 3998 0 10
+_delay: CODE, 4008 0 15
+_ISR: CODE, 45 0 327
+___ftpack: CODE, 1449 0 104
+___awmod: CODE, 1742 0 79
+_trunc: CODE, 1821 0 74
+_main: CODE, 2019 0 24
+_round: CODE, 1553 0 96
+___ftadd: CODE, 372 0 265
+_floor: CODE, 1030 0 153
+__initialization: CODE, 25 0 16
+_frexp: CODE, 1961 0 58
+___ftmul: CODE, 637 0 211
+___awtoft: CODE, 4023 0 33
+_round_to_one_decimal: CODE, 1325 0 124
+_readADC: CODE, 4056 0 40
+___altoft: CODE, 1895 0 66
+___fttol: CODE, 1183 0 142
+___ftge: CODE, 1649 0 93
+___ftdiv: CODE, 848 0 182
+Total: 2112

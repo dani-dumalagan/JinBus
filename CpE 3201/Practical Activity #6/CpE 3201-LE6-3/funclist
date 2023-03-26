@@ -1,0 +1,6 @@
+_printString: CODE, 1805 0 86
+_delay: CODE, 1766 0 39
+_strlen: CODE, 1728 0 38
+_main: CODE, 1891 0 141
+__initialization: CODE, 2032 0 12
+Total: 316

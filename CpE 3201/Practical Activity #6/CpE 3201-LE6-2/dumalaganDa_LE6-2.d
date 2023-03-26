@@ -1,0 +1,1 @@
+ dumalaganDa_LE6-2.d  dumalaganDa_LE6-2.p1:  D:/JinBus/CpE\ 3201/Practical\ Activity\ #6/CpE\ 3201-LE6-2/dumalaganDa_LE6-2.c

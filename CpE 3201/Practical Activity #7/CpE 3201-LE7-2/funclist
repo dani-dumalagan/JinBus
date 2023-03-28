@@ -1,0 +1,5 @@
+_ISR: CODE, 25 0 67
+_init_I2C_Slave: CODE, 92 0 24
+_main: CODE, 116 0 17
+__initialization: CODE, 21 0 0
+Total: 108

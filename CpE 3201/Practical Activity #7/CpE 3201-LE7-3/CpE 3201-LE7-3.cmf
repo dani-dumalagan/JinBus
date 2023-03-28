@@ -1,0 +1,1194 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$startup.obj
+end_init CODE 0 0 0 3 2
+config CONFIG 0 2007 2007 1 2
+$CpE 3201-LE7-3.obj
+cinit CODE 0 7F0 7F0 10 2
+text33 CODE 0 1255 1255 8 2
+text32 CODE 0 132A 132A 26 2
+text31 CODE 0 1240 1240 7 2
+text30 CODE 0 800 800 9 2
+text29 CODE 0 1247 1247 7 2
+text28 CODE 0 124E 124E 7 2
+text27 CODE 0 1574 1574 68 2
+text26 CODE 0 3 3 B8 2
+text25 CODE 0 12BE 12BE 14 2
+text24 CODE 0 139C 139C 27 2
+text23 CODE 0 1285 1285 13 2
+text22 CODE 0 1298 1298 13 2
+text21 CODE 0 1350 1350 26 2
+text20 CODE 0 1265 1265 F 2
+text19 CODE 0 145C 145C 5D 2
+text18 CODE 0 125D 125D 8 2
+text17 CODE 0 834 834 109 2
+text16 CODE 0 12EB 12EB 1C 2
+text15 CODE 0 15DC 15DC 8E 2
+text14 CODE 0 1516 1516 5E 2
+text13 CODE 0 13C3 13C3 4C 2
+text12 CODE 0 809 809 2B 2
+text11 CODE 0 1307 1307 23 2
+text10 CODE 0 93D 93D 132 2
+text9 CODE 0 166A 166A C3 2
+text8 CODE 0 14B9 14B9 5D 2
+text7 CODE 0 140F 140F 4D 2
+text6 CODE 0 12AB 12AB 13 2
+text5 CODE 0 172D 172D D3 2
+text4 CODE 0 BB BB 19C 2
+text3 CODE 0 A6F A6F 29F 2
+text2 CODE 0 257 257 599 2
+text1 CODE 0 1376 1376 26 2
+maintext CODE 0 D0E D0E 2F2 2
+cstackBANK0 BANK0 1 20 20 4D 1
+cstackCOMMON COMMON 1 70 70 E 1
+cstackBANK1 BANK1 1 A0 A0 26 1
+cstackBANK3 BANK3 1 190 190 31 1
+inittext CODE 0 1274 1274 11 2
+dataBANK3 BANK3 1 1C1 1C1 19 1
+strings STRING 0 1000 1000 7F 2
+idataBANK3 CODE 0 12D2 12D2 19 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 006D-006F 1
+BANK1 00C6-00EF 1
+BANK2 0110-016F 1
+BANK3 01DA-01EF 1
+CODE 107F-123F 2
+CODE 1800-1FFF 2
+CONST 107F-123F 2
+CONST 1800-1FFF 2
+EEDATA 2100-21FF 2
+ENTRY 107F-123F 2
+ENTRY 1800-1FFF 2
+IDLOC 2000-2003 2
+RAM 006D-006F 1
+RAM 00C6-00EF 1
+RAM 0110-016F 1
+RAM 01DA-01EF 1
+SFR0 0000-001F 1
+SFR1 0080-009F 1
+SFR2 0100-010F 1
+SFR3 0180-018F 1
+STACK 0110-016F 1
+STRCODE 107F-123F 2
+STRCODE 1800-1FFF 2
+STRING 107F-123F 2
+STRING 1800-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$CpE 3201-LE7-3.obj
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":49 3 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":55 3 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":56 14 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":57 1B text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":58 2A text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":59 31 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":60 37 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":61 3C text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":62 4E text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":63 60 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":64 64 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":65 65 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":66 6B text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":67 6C text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":68 72 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":70 76 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":71 7E text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":72 8A text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":73 94 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":75 95 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":76 9D text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\pic\ftdiv.c":77 A1 text26 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":409 BB text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":413 BE text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":414 C2 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":415 19B text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":416 19F text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":417 225 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":492 257 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":542 25A text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":545 262 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":547 275 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":550 279 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":557 27D text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":644 27F text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":671 280 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":672 280 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":673 281 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":644 282 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":834 298 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":838 2A8 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":839 2AE text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":840 2C1 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":841 2D4 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":842 2E9 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":844 2ED text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":845 2F1 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":846 2F6 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":847 323 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":848 329 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":849 340 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":850 357 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":851 359 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":855 35F text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":856 378 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":857 3B1 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":858 3C4 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":859 3CC text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":860 3E1 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1121 3E9 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1122 3F6 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1125 42F text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1129 46D text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1130 482 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1132 484 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1134 48C text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1135 4A4 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1138 4C7 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1139 4CD text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1140 4CE text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1141 4FD text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1142 53B text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1145 53D text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1146 543 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1145 587 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1197 593 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1199 5A3 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1212 5A4 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1205 5B4 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1215 5B4 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1210 5BF text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1211 5FE text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1212 61D text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1205 621 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1217 622 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1218 635 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1216 63B text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1220 646 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1221 653 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1223 655 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1224 65F text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1228 672 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1230 675 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1236 688 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1241 6EB text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1237 6EC text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1238 6F8 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1239 737 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1240 756 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1241 76A text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1237 7A8 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1245 7A9 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1246 7BC text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1244 7C2 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1447 7C7 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1448 7D9 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":545 7EA text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":1547 7EB text2 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":520 7F0 cinit CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":523 7F0 cinit CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":570 7F0 cinit CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":571 7F1 cinit CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":572 7F2 cinit CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":573 7F3 cinit CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":574 7F4 cinit CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":575 7F5 cinit CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":576 7F6 cinit CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":577 7F7 cinit CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":578 7F8 cinit CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":579 7F9 cinit CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":585 7FC cinit CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":586 7FC cinit CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":587 7FD cinit CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":86 800 text30 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":88 801 text30 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":90 804 text30 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":91 808 text30 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lltoft.c":35 809 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lltoft.c":38 809 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lltoft.c":41 80D text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lltoft.c":42 811 text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lltoft.c":43 81A text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lltoft.c":41 81E text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lltoft.c":45 81F text12 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":86 834 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":90 834 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":91 842 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":92 84E text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":93 85D text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":94 864 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":96 873 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":97 877 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":98 878 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":99 879 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":100 87A text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":101 87B text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":102 87C text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":103 882 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":104 883 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":106 889 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":110 88D text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":111 895 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":112 897 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":114 8A2 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":115 8AA text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":113 8AE text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":117 8B3 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":121 8B7 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":122 8BF text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":123 8C1 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":125 8CC text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":126 8D4 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":124 8D8 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":129 8DC text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":131 8DE text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":132 8E4 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":134 8EE text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":136 8F0 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":137 8F6 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":139 900 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":140 901 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":141 90F text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":142 911 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":143 917 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":144 921 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftadd.c":146 923 text17 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":60 93D text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":66 93D text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":67 955 text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":68 95E text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":69 974 text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":70 97D text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":71 98A text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":72 997 text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":73 9A4 text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":74 9B1 text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":75 9B9 text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":76 9BB text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":77 9C0 text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":79 9C4 text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":80 9CD text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":81 9F7 text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":82 A19 text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":83 A1A text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":84 A1A text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":85 A27 text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":86 A2B text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":87 A2D text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":88 A32 text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":90 A3B text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":91 A44 text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":93 A4B text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":94 A4F text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":96 A58 text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":97 A61 text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":95 A63 text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fldivl.c":100 A66 text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":425 A6F text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":428 A72 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":429 A74 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":430 A76 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":431 A7B text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":432 B35 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":433 B3A text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":434 BA3 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":436 BC2 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":437 BC7 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":438 C81 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":439 C86 text3 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\doprnt.c":440 CEF text3 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":106 D0E maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":107 D0E maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":108 D11 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":110 D12 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":112 D17 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":113 D1C maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":115 D1C maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":116 D20 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":117 D22 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":118 D24 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":119 D26 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":120 D2C maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":121 D32 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":122 D49 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":126 D5E maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":127 D64 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":128 D6A maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":129 D70 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":130 D76 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":131 D7B maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":132 D81 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":133 D87 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":134 D8C maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":135 D92 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":136 DA6 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":137 DBA maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":138 DBF maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":140 DC8 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":141 DD0 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":142 DDF maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":143 DE5 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":144 E3F maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":145 E5F maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":146 E73 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":145 E7D maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":147 E86 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":148 E8C maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":149 E94 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":150 E9A maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":151 EA0 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":152 EA5 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":153 EAB maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":154 EB1 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":155 EB7 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":156 EBC maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":157 EC2 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":158 ED6 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":159 EEA maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":160 EEF maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":161 EF8 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":162 F00 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":163 F0F maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":164 F15 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":165 F6F maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":166 F8F maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":167 FA3 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":166 FAD maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":168 FB6 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":169 FBC maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":170 FC4 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":171 FCC maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":172 FD4 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":173 FDA maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":174 FE0 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":175 FE5 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":176 FEB maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":177 FF1 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":178 FF6 maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":179 FFF maintext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":79 1240 text31 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":81 1240 text31 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":83 1243 text31 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":84 1246 text31 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":65 1247 text29 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":67 1247 text29 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":69 124A text29 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":70 124D text29 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":72 124E text28 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":74 124E text28 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":76 1251 text28 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":77 1254 text28 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":60 1255 text33 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":62 1255 text33 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":63 125C text33 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c":15 125D text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c":17 125D text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c":18 1262 text18 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftneg.c":20 1264 text18 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":50 1265 text20 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":51 1265 text20 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":52 1268 text20 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":53 1269 text20 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":54 126D text20 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":56 1270 text20 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":57 1271 text20 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":58 1273 text20 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":544 1274 inittext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":545 1274 inittext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":546 1275 inittext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":547 1276 inittext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":548 1277 inittext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":555 1278 inittext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":556 1278 inittext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":557 127B inittext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":558 127C inittext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":559 127D inittext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":560 127E inittext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":561 127F inittext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":562 1280 inittext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":563 1281 inittext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":564 1282 inittext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":565 1283 inittext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\CpE 3201-LE7-3.as":566 1284 inittext CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":41 1285 text23 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":42 1286 text23 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":43 128A text23 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":44 128B text23 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":45 128C text23 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":46 128D text23 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":47 1294 text23 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":48 1297 text23 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":23 1298 text22 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":24 1299 text22 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":25 129D text22 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":26 129E text22 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":27 129F text22 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":28 12A0 text22 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":29 12A7 text22 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":30 12AA text22 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c":4 12AB text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c":6 12AE text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c":43 12AF text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c":44 12B1 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c":45 12B5 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c":46 12B7 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c":47 12B9 text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c":50 12BC text6 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwtoft.c":28 12BE text25 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwtoft.c":30 12BE text25 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftsub.c":18 12EB text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftsub.c":23 12EB text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftsub.c":24 12EF text16 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":15 1307 text11 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":43 1307 text11 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":45 1309 text11 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":46 130B text11 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":47 1311 text11 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":48 1318 text11 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":49 131F text11 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":52 1323 text11 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":93 132A text32 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":95 132B text32 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":96 1330 text32 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":97 1333 text32 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":98 1338 text32 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":99 133E text32 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":100 1343 text32 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":101 134D text32 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":102 134E text32 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":32 1350 text21 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":33 1350 text21 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":34 1359 text21 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":35 135F text21 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":36 1365 text21 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":37 136B text21 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":38 1371 text21 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":39 1375 text21 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\strlen.c":4 1376 text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\strlen.c":8 1377 text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\strlen.c":9 137B text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\strlen.c":10 1381 text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\strlen.c":9 1385 text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\strlen.c":12 1386 text1 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":16 139C text24 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":18 139C text24 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":19 13A6 text24 CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\dumalaganDa_LE7-3.c":18 13BC text24 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":6 13C3 text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":13 13C3 text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":14 13C9 text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":15 13CB text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":16 13CD text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":17 13D6 text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":15 13DA text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":20 13DB text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":21 13EB text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":22 13F9 text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":23 1402 text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\llmod.c":25 1406 text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":6 140F text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":13 140F text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":14 1410 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":15 1412 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":16 1417 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":18 1419 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":19 141B text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":20 1420 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":21 1424 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":22 1426 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":23 1428 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":24 142F text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":22 1433 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":27 1434 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":28 143C text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":29 1442 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":30 1449 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":32 144D text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":33 1450 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":34 1455 text7 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":4 145C text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":6 145C text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":7 145E text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":8 1483 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":9 1485 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":10 14AA text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":11 14AC text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftge.c":12 14AE text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":6 14B9 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":14 14B9 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":15 14BC text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":16 14BE text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":17 14C3 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":19 14C5 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":20 14C7 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":21 14CC text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":23 14D0 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":24 14D2 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":25 14D6 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":26 14D8 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":27 14DA text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":28 14E1 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":26 14E5 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":31 14E6 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":32 14ED text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":33 14F5 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":34 14FB text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":36 14FC text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":37 1503 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":39 1507 text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":40 150A text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":41 150F text8 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":6 1516 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":14 1516 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":15 151E text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":16 1524 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":17 1526 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":18 1528 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":19 1531 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":17 1535 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":22 1536 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":23 153F text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":24 154F text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":25 155D text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":27 155E text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":28 1567 text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lldiv.c":30 156B text14 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":62 1574 text27 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":64 1574 text27 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":65 157C text27 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":67 1583 text27 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":68 1587 text27 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":66 158F text27 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":71 1594 text27 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":72 1598 text27 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":73 15A2 text27 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":70 15AA text27 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":74 15AA text27 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":76 15AF text27 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":77 15B1 text27 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":75 15B9 text27 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":79 15BB text27 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":80 15BD text27 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":81 15C3 text27 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":82 15C5 text27 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":83 15D7 text27 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":84 15DA text27 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\float.c":86 15DB text27 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":44 15DC text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":49 15DC text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":50 15ED text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":51 15F6 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":52 1608 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":53 1609 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":54 160F text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":55 1616 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":56 1618 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":57 161A text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":58 161F text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":60 1628 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":61 1631 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":63 1638 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":64 163C text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":66 1645 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":67 164E text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":65 1650 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":70 1653 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":71 1656 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\fttol.c":72 1661 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":60 166A text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":66 166A text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":67 167B text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":68 1684 text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":69 1693 text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":70 169C text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":71 169D text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":72 16A3 text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":73 16A4 text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":74 16AA text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":75 16B2 text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":76 16B4 text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":77 16B9 text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":79 16BD text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":80 16C6 text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":81 16D2 text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":82 16DC text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":84 16DD text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":85 16E5 text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":86 16E9 text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":87 16EB text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":88 16F0 text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":90 16F9 text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":91 1702 text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":93 1709 text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":94 170D text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":96 1716 text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":97 171F text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":95 1721 text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftdivl.c":100 1724 text9 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":62 172D text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":67 172D text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":68 173E text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":69 1745 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":70 1754 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":71 175B text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":72 1760 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":73 1772 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":74 1784 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":75 1788 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":77 1789 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":78 178A text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":79 1790 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":134 1796 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":136 179A text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":137 179C text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":138 17AA text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":139 17B2 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":140 17BA text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":143 17BE text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":145 17C2 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":146 17C4 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":147 17D2 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":148 17DA text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":149 17E2 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\ftmul.c":156 17E6 text5 CODE
+$startup.obj
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\startup.as":40 0 functab CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\startup.as":41 0 functab CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\startup.as":42 0 functab CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\startup.as":43 0 functab CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\startup.as":44 0 functab CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\startup.as":45 0 functab CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\startup.as":64 0 reset_vec CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\startup.as":70 0 init CODE
+"D:\JinBus\CpE 3201\Practical Activity #7\CpE 3201-LE7-3\startup.as":73 0 end_init CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__size_of_I2C_Send 0 0 ABS 0 - CpE 3201-LE7-3.obj
+___lldiv@counter 7D 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+sprintf@fval BE 0 BANK1 1 cstackBANK1 CpE 3201-LE7-3.obj
+___awdiv@counter 20 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+sprintf@f 63 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+___lltoft@c 78 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+___lwtoft@c 78 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+__end_of___ftneg 24CA 0 CODE 0 text18 CpE 3201-LE7-3.obj
+__CFG_WRT$OFF 0 0 ABS 0 - CpE 3201-LE7-3.obj
+_RD0 40 0 ABS 0 - CpE 3201-LE7-3.obj
+_RD1 41 0 ABS 0 - CpE 3201-LE7-3.obj
+_RD2 42 0 ABS 0 - CpE 3201-LE7-3.obj
+__S0 2008 0 ABS 0 - -
+__S1 1DA 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+_PEN 48A 0 ABS 0 - CpE 3201-LE7-3.obj
+_SEN 488 0 ABS 0 - CpE 3201-LE7-3.obj
+__Hintentry 0 0 CODE 0 intentry -
+__Lintentry 0 0 CODE 0 intentry -
+__CFG_BOREN$ON 0 0 ABS 0 - CpE 3201-LE7-3.obj
+___ftadd@f1 50 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+__end_of___awdiv 2A2C 0 CODE 0 text8 CpE 3201-LE7-3.obj
+__CFG_PWRTE$ON 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__size_of___ftsub 0 0 ABS 0 - CpE 3201-LE7-3.obj
+_RCEN 48B 0 ABS 0 - CpE 3201-LE7-3.obj
+_RSEN 489 0 ABS 0 - CpE 3201-LE7-3.obj
+___ftneg@f1 70 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+___ftadd@f2 53 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+main@humidityFl 1A9 0 BANK3 1 cstackBANK3 CpE 3201-LE7-3.obj
+_I2C_Receive 2654 0 CODE 0 text32 CpE 3201-LE7-3.obj
+___ftsub@f1 60 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+delay_ms@i 72 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+_main 1A1C 0 CODE 0 maintext CpE 3201-LE7-3.obj
+___sp 0 0 STACK 2 stack startup.obj
+btemp 7E 0 ABS 0 - CpE 3201-LE7-3.obj
+ltemp 7E 0 ABS 0 - CpE 3201-LE7-3.obj
+ttemp 7E 0 ABS 0 - CpE 3201-LE7-3.obj
+wtemp 7E 0 ABS 0 - CpE 3201-LE7-3.obj
+start 0 0 CODE 0 init startup.obj
+delay_ms@j 74 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+_I2C_Send 1000 0 CODE 0 text30 CpE 3201-LE7-3.obj
+?___ftadd 50 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+___fttol@f1 49 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+___ftsub@f2 5D 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+___ftmul@f1 30 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+___fttol@lval 52 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+___ftdiv@f1 23 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+strlen@cp 76 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+_TRISB 86 0 ABS 0 - CpE 3201-LE7-3.obj
+reset_vec 0 0 CODE 0 reset_vec startup.obj
+_TRISD 88 0 ABS 0 - CpE 3201-LE7-3.obj
+_PORTB 6 0 ABS 0 - CpE 3201-LE7-3.obj
+_ACKEN 48C 0 ABS 0 - CpE 3201-LE7-3.obj
+_ACKDT 48D 0 ABS 0 - CpE 3201-LE7-3.obj
+ltemp0 7E 0 ABS 0 - CpE 3201-LE7-3.obj
+ttemp0 7E 0 ABS 0 - CpE 3201-LE7-3.obj
+wtemp0 7E 0 ABS 0 - CpE 3201-LE7-3.obj
+ltemp1 82 0 ABS 0 - CpE 3201-LE7-3.obj
+ttemp1 81 0 ABS 0 - CpE 3201-LE7-3.obj
+wtemp1 80 0 ABS 0 - CpE 3201-LE7-3.obj
+ltemp2 86 0 ABS 0 - CpE 3201-LE7-3.obj
+ttemp2 84 0 ABS 0 - CpE 3201-LE7-3.obj
+wtemp2 82 0 ABS 0 - CpE 3201-LE7-3.obj
+ltemp3 80 0 ABS 0 - CpE 3201-LE7-3.obj
+ttemp3 87 0 ABS 0 - CpE 3201-LE7-3.obj
+wtemp3 84 0 ABS 0 - CpE 3201-LE7-3.obj
+___ftmul@f2 33 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+ttemp4 7F 0 ABS 0 - CpE 3201-LE7-3.obj
+wtemp4 86 0 ABS 0 - CpE 3201-LE7-3.obj
+wtemp5 88 0 ABS 0 - CpE 3201-LE7-3.obj
+wtemp6 7F 0 ABS 0 - CpE 3201-LE7-3.obj
+scale@scl 48 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+___ftdiv@f2 20 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+__Hconfig 4010 0 CONFIG 0 config -
+__Lconfig 400E 0 CONFIG 0 config -
+?___ftneg 70 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+__powers_ 20AA 0 STRING 0 strings CpE 3201-LE7-3.obj
+___ftpack 2AE8 0 CODE 0 text27 CpE 3201-LE7-3.obj
+?___llmod 70 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+?___awmod 70 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+__end_of__stringtab 200C 0 STRING 0 strings CpE 3201-LE7-3.obj
+main@i 1BF 0 BANK3 1 cstackBANK3 CpE 3201-LE7-3.obj
+___ftdiv@f3 2B 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+main@F1272 1CF 0 BANK3 1 dataBANK3 CpE 3201-LE7-3.obj
+_scale 14DE 0 CODE 0 text3 CpE 3201-LE7-3.obj
+__Hram 0 0 ABS 0 ram -
+?___ftsub 5D 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+__Lram 0 0 ABS 0 ram -
+__end_of__stringdata 20FE 0 STRING 0 strings CpE 3201-LE7-3.obj
+___ftge@ff1 70 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+_I2C_Wait 24AA 0 CODE 0 text33 CpE 3201-LE7-3.obj
+?_sprintf 63 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+_dataCtrl 250A 0 CODE 0 text23 CpE 3201-LE7-3.obj
+___ftmul@cntr 3E 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+__size_of___ftadd 0 0 ABS 0 - CpE 3201-LE7-3.obj
+main@F1274 1C1 0 BANK3 1 dataBANK3 CpE 3201-LE7-3.obj
+___ftdiv@cntr 2A 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+_instCtrl 2530 0 CODE 0 text22 CpE 3201-LE7-3.obj
+__Hfunctab 0 0 CODE 0 functab -
+__Lfunctab 0 0 CODE 0 functab -
+_I2C_Stop 249C 0 CODE 0 text28 CpE 3201-LE7-3.obj
+_TRISC3 43B 0 ABS 0 - CpE 3201-LE7-3.obj
+__tdiv_to_l_@quot 20 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+___ftge@ff2 73 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+_TRISC4 43C 0 ABS 0 - CpE 3201-LE7-3.obj
+sprintf@vd A8 0 BANK1 1 cstackBANK1 CpE 3201-LE7-3.obj
+__Hcommon 0 0 ABS 0 common -
+__Lcommon 0 0 ABS 0 common -
+?___fttol 49 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+I2C_Receive@temp 72 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+instCtrl@INST 76 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+?___ftmul 30 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+__size_of_init_I2C_Master 0 0 ABS 0 - CpE 3201-LE7-3.obj
+sprintf@ap A7 0 BANK1 1 cstackBANK1 CpE 3201-LE7-3.obj
+_SSPADD 93 0 ABS 0 - CpE 3201-LE7-3.obj
+___int_sp 0 0 STACK 2 stack startup.obj
+_delay_ms 2738 0 CODE 0 text24 CpE 3201-LE7-3.obj
+?___lldiv 70 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+?___ftdiv 20 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+?___awdiv 77 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+___lltoft 1012 0 CODE 0 text12 CpE 3201-LE7-3.obj
+__end_of_strlen 2738 0 CODE 0 text1 CpE 3201-LE7-3.obj
+___lwtoft 257C 0 CODE 0 text25 CpE 3201-LE7-3.obj
+_SSPBUF 13 0 ABS 0 - CpE 3201-LE7-3.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Labs1 0 0 ABS 0 abs1 -
+_SSPCON 14 0 ABS 0 - CpE 3201-LE7-3.obj
+__Hsfr0 0 0 ABS 0 sfr0 -
+__end_of__powers_ 20F8 0 STRING 0 strings CpE 3201-LE7-3.obj
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+_scale$577 45 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+___ftmul@f3_as_product 3B 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+?__tdiv_to_l_ 70 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+__npowers_ 205C 0 STRING 0 strings CpE 3201-LE7-3.obj
+__end_of___ftpack 2BB8 0 CODE 0 text27 CpE 3201-LE7-3.obj
+?___ftpack 70 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+dataCtrl@DATA 76 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+__div_to_l_@f1 70 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+__size_of___ftpack 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__end_of_dpowers 205C 0 STRING 0 strings CpE 3201-LE7-3.obj
+__end_of_scale 1A1C 0 CODE 0 text3 CpE 3201-LE7-3.obj
+__size_of___fttol 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__end_of___awmod 28B8 0 CODE 0 text7 CpE 3201-LE7-3.obj
+___ftadd@sign 5A 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+init_fetch0 24E8 0 CODE 0 inittext CpE 3201-LE7-3.obj
+__Hcode 0 0 ABS 0 code -
+__Lcode 0 0 ABS 0 code -
+?_scale 40 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+__end_of_I2C_RepeatedStart 248E 0 CODE 0 text31 CpE 3201-LE7-3.obj
+___ftge 28B8 0 CODE 0 text19 CpE 3201-LE7-3.obj
+stackhi 0 0 ABS 0 - startup.obj
+sprintf@sp BD 0 BANK1 1 cstackBANK1 CpE 3201-LE7-3.obj
+_fround 176 0 CODE 0 text4 CpE 3201-LE7-3.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+_strlen 26EC 0 CODE 0 text1 CpE 3201-LE7-3.obj
+___awmod@sign 76 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+stacklo 0 0 ABS 0 - startup.obj
+___bmul 2556 0 CODE 0 text6 CpE 3201-LE7-3.obj
+__Hinit 0 0 CODE 0 init -
+__Linit 0 0 CODE 0 init -
+___wmul 260E 0 CODE 0 text11 CpE 3201-LE7-3.obj
+__end_of_main 2000 0 CODE 0 maintext CpE 3201-LE7-3.obj
+__size_of___lwtoft 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__Htext 0 0 ABS 0 text -
+__Ltext 0 0 ABS 0 text -
+sprintf@vd_151 AC 0 BANK1 1 cstackBANK1 CpE 3201-LE7-3.obj
+__div_to_l_ 127A 0 CODE 0 text10 CpE 3201-LE7-3.obj
+___bmul@multiplier 26 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+___wmul@multiplier 70 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+__size_of___ftneg 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__end_of___lwtoft 25A4 0 CODE 0 text25 CpE 3201-LE7-3.obj
+___ftmul@sign 3F 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+end_of_initialization FF8 0 CODE 0 cinit CpE 3201-LE7-3.obj
+___ftdiv@sign 2F 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+___awdiv@sign 21 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+__size_of__div_to_l_ 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__size_of_I2C_Stop 0 0 ABS 0 - CpE 3201-LE7-3.obj
+___bmul@multiplicand 24 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+__size_of_I2C_Start 0 0 ABS 0 - CpE 3201-LE7-3.obj
+___wmul@multiplicand 72 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+__end_of_instCtrl 2556 0 CODE 0 text22 CpE 3201-LE7-3.obj
+_SSPCON2 91 0 ABS 0 - CpE 3201-LE7-3.obj
+__stringtab 2000 0 STRING 0 strings CpE 3201-LE7-3.obj
+__size_of_initLCD 0 0 ABS 0 - CpE 3201-LE7-3.obj
+fround@prec 4F 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+__CFG_FOSC$XT 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__end_of___ftadd 127A 0 CODE 0 text17 CpE 3201-LE7-3.obj
+__end_of___lltoft 1068 0 CODE 0 text12 CpE 3201-LE7-3.obj
+I2C_Send@data 70 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+__Hstrings 0 0 ABS 0 strings -
+__Lstrings 0 0 ABS 0 strings -
+__pstrings 2000 0 STRING 0 strings CpE 3201-LE7-3.obj
+_I2C_Start 248E 0 CODE 0 text29 CpE 3201-LE7-3.obj
+?___lltoft 78 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+_fround$575 4C 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+?___lwtoft 78 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+_initLCD 26A0 0 CODE 0 text21 CpE 3201-LE7-3.obj
+__size_of_strlen 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__size_of___lltoft 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Lbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Lbank2 0 0 ABS 0 bank2 -
+__end_of_dataCtrl 2530 0 CODE 0 text23 CpE 3201-LE7-3.obj
+__Hbank3 0 0 ABS 0 bank3 -
+_fround$576 49 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+__Lbank3 0 0 ABS 0 bank3 -
+___latbits 2 0 ABS 0 - CpE 3201-LE7-3.obj
+___ftmul@exp 3A 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+___ftdiv@exp 2E 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+__Hpowerup 0 0 CODE 0 powerup -
+_SSPSTAT 94 0 ABS 0 - CpE 3201-LE7-3.obj
+__Lpowerup 0 0 CODE 0 powerup -
+__div_to_l_@f2 73 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+__ptext1 26EC 0 CODE 0 text1 CpE 3201-LE7-3.obj
+__ptext2 4AE 0 CODE 0 text2 CpE 3201-LE7-3.obj
+__HdataBANK3 0 0 ABS 0 dataBANK3 -
+__LdataBANK3 0 0 ABS 0 dataBANK3 -
+__ptext3 14DE 0 CODE 0 text3 CpE 3201-LE7-3.obj
+__pdataBANK3 1C1 0 BANK3 1 dataBANK3 CpE 3201-LE7-3.obj
+__ptext4 176 0 CODE 0 text4 CpE 3201-LE7-3.obj
+delay_ms@ms_Count 70 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+__ptext5 2E5A 0 CODE 0 text5 CpE 3201-LE7-3.obj
+__ptext6 2556 0 CODE 0 text6 CpE 3201-LE7-3.obj
+__size_of_I2C_RepeatedStart 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__ptext7 281E 0 CODE 0 text7 CpE 3201-LE7-3.obj
+__HcstackBANK1 0 0 ABS 0 cstackBANK1 -
+__LcstackBANK1 0 0 ABS 0 cstackBANK1 -
+__ptext8 2972 0 CODE 0 text8 CpE 3201-LE7-3.obj
+I2C_Receive@ack 71 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+__ptext9 2CD4 0 CODE 0 text9 CpE 3201-LE7-3.obj
+__pcstackBANK1 A0 0 BANK1 1 cstackBANK1 CpE 3201-LE7-3.obj
+__end_of__npowers_ 20AA 0 STRING 0 strings CpE 3201-LE7-3.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+__Lclrtext 0 0 ABS 0 clrtext -
+main@humidityStr 1AF 0 BANK3 1 cstackBANK3 CpE 3201-LE7-3.obj
+__end_of_init_I2C_Master 24E8 0 CODE 0 text20 CpE 3201-LE7-3.obj
+_I2C_RepeatedStart 2480 0 CODE 0 text31 CpE 3201-LE7-3.obj
+__end_of__initialization FF8 0 CODE 0 cinit CpE 3201-LE7-3.obj
+__tdiv_to_l_@f1 70 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+__end_of__div_to_l_ 14DE 0 CODE 0 text10 CpE 3201-LE7-3.obj
+__end_of_I2C_Stop 24AA 0 CODE 0 text28 CpE 3201-LE7-3.obj
+__size_of_scale 0 0 ABS 0 - CpE 3201-LE7-3.obj
+strlen@s 77 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+___ftadd 1068 0 CODE 0 text17 CpE 3201-LE7-3.obj
+__size_of_fround 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__end_of_I2C_Wait 24BA 0 CODE 0 text33 CpE 3201-LE7-3.obj
+__Hidloc 0 0 IDLOC 0 idloc -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__Lstack 0 0 STACK 2 stack -
+___ftneg 24BA 0 CODE 0 text18 CpE 3201-LE7-3.obj
+___llmod 2786 0 CODE 0 text13 CpE 3201-LE7-3.obj
+__end_of___lldiv 2AE8 0 CODE 0 text14 CpE 3201-LE7-3.obj
+___awmod 281E 0 CODE 0 text7 CpE 3201-LE7-3.obj
+__Hspace_0 2008 0 ABS 0 - -
+?_fround 40 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+__Lspace_0 0 0 ABS 0 - -
+___ftsub 25D6 0 CODE 0 text16 CpE 3201-LE7-3.obj
+___ftpack@sign 74 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+_sprintf 4AE 0 CODE 0 text2 CpE 3201-LE7-3.obj
+__Hspace_1 1DA 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+?_strlen 70 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+___ftadd@exp1 5C 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+__Hspace_2 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+___fttol 2BB8 0 CODE 0 text15 CpE 3201-LE7-3.obj
+?___wmul 70 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+__size_of_delay_ms 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__Hcinit 1000 0 CODE 0 cinit -
+___ftmul 2E5A 0 CODE 0 text5 CpE 3201-LE7-3.obj
+_init_I2C_Master 24CA 0 CODE 0 text20 CpE 3201-LE7-3.obj
+__Lcinit FE0 0 CODE 0 cinit -
+___lldiv 2A2C 0 CODE 0 text14 CpE 3201-LE7-3.obj
+___ftdiv 6 0 CODE 0 text26 CpE 3201-LE7-3.obj
+___awdiv 2972 0 CODE 0 text8 CpE 3201-LE7-3.obj
+__Hspace_3 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__size_of_main 0 0 ABS 0 - CpE 3201-LE7-3.obj
+_dpowers 200C 0 STRING 0 strings CpE 3201-LE7-3.obj
+?__div_to_l_ 70 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+__tdiv_to_l_ 2CD4 0 CODE 0 text9 CpE 3201-LE7-3.obj
+__div_to_l_@exp1 25 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+___fttol@exp1 56 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+__size_of_I2C_Wait 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__size_of___ftdiv 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__end_of_sprintf FE0 0 CODE 0 text2 CpE 3201-LE7-3.obj
+___ftpack@arg 70 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+___ftadd@exp2 5B 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+__end_of_I2C_Send 1012 0 CODE 0 text30 CpE 3201-LE7-3.obj
+main@temperatureFl 1AC 0 BANK3 1 cstackBANK3 CpE 3201-LE7-3.obj
+sprintf@flag B0 0 BANK1 1 cstackBANK1 CpE 3201-LE7-3.obj
+main@temperatureStr 1B3 0 BANK3 1 cstackBANK3 CpE 3201-LE7-3.obj
+__ptext10 127A 0 CODE 0 text10 CpE 3201-LE7-3.obj
+__ptext20 24CA 0 CODE 0 text20 CpE 3201-LE7-3.obj
+sprintf@exp BB 0 BANK1 1 cstackBANK1 CpE 3201-LE7-3.obj
+__ptext11 260E 0 CODE 0 text11 CpE 3201-LE7-3.obj
+__ptext30 1000 0 CODE 0 text30 CpE 3201-LE7-3.obj
+__ptext21 26A0 0 CODE 0 text21 CpE 3201-LE7-3.obj
+__ptext12 1012 0 CODE 0 text12 CpE 3201-LE7-3.obj
+__ptext31 2480 0 CODE 0 text31 CpE 3201-LE7-3.obj
+__ptext22 2530 0 CODE 0 text22 CpE 3201-LE7-3.obj
+__ptext13 2786 0 CODE 0 text13 CpE 3201-LE7-3.obj
+__ptext32 2654 0 CODE 0 text32 CpE 3201-LE7-3.obj
+__ptext23 250A 0 CODE 0 text23 CpE 3201-LE7-3.obj
+sprintf@prec B2 0 BANK1 1 cstackBANK1 CpE 3201-LE7-3.obj
+__size_of___awdiv 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__ptext14 2A2C 0 CODE 0 text14 CpE 3201-LE7-3.obj
+__ptext33 24AA 0 CODE 0 text33 CpE 3201-LE7-3.obj
+__ptext24 2738 0 CODE 0 text24 CpE 3201-LE7-3.obj
+__size_of_I2C_Receive 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__end_of__tdiv_to_l_ 2E5A 0 CODE 0 text9 CpE 3201-LE7-3.obj
+__ptext15 2BB8 0 CODE 0 text15 CpE 3201-LE7-3.obj
+__ptext25 257C 0 CODE 0 text25 CpE 3201-LE7-3.obj
+__ptext16 25D6 0 CODE 0 text16 CpE 3201-LE7-3.obj
+__ptext26 6 0 CODE 0 text26 CpE 3201-LE7-3.obj
+___llmod@divisor 70 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+__ptext17 1068 0 CODE 0 text17 CpE 3201-LE7-3.obj
+___awmod@divisor 70 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+__ptext27 2AE8 0 CODE 0 text27 CpE 3201-LE7-3.obj
+__ptext18 24BA 0 CODE 0 text18 CpE 3201-LE7-3.obj
+main@msgTemperature 190 0 BANK3 1 cstackBANK3 CpE 3201-LE7-3.obj
+__ptext28 249C 0 CODE 0 text28 CpE 3201-LE7-3.obj
+___fttol@sign1 51 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+__ptext19 28B8 0 CODE 0 text19 CpE 3201-LE7-3.obj
+__ptext29 248E 0 CODE 0 text29 CpE 3201-LE7-3.obj
+__Hend_init 6 0 CODE 0 end_init -
+__Lend_init 0 0 CODE 0 end_init -
+__end_of_fround 4AE 0 CODE 0 text4 CpE 3201-LE7-3.obj
+___lldiv@divisor 70 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+___ftpack@exp 73 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+__size_of___lldiv 0 0 ABS 0 - CpE 3201-LE7-3.obj
+___awdiv@divisor 77 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+__end_of_delay_ms 2786 0 CODE 0 text24 CpE 3201-LE7-3.obj
+main@LSBH 1B7 0 BANK3 1 cstackBANK3 CpE 3201-LE7-3.obj
+main@MSBH 1BB 0 BANK3 1 cstackBANK3 CpE 3201-LE7-3.obj
+__end_of___ftmul 3000 0 CODE 0 text5 CpE 3201-LE7-3.obj
+__end_of___llmod 281E 0 CODE 0 text13 CpE 3201-LE7-3.obj
+__tdiv_to_l_@cntr 24 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+__size_of___wmul 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__Hreset_vec 0 0 CODE 0 reset_vec -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__HcstackBANK3 0 0 ABS 0 cstackBANK3 -
+__LcstackBANK3 0 0 ABS 0 cstackBANK3 -
+__pcstackBANK3 190 0 BANK3 1 cstackBANK3 CpE 3201-LE7-3.obj
+__stringdata 20F8 0 STRING 0 strings CpE 3201-LE7-3.obj
+__tdiv_to_l_@exp1 25 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+__div_to_l_@cntr 24 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+init_ram0 24F0 0 CODE 0 inittext CpE 3201-LE7-3.obj
+__size_of_instCtrl 0 0 ABS 0 - CpE 3201-LE7-3.obj
+intlevel0 0 0 CODE 0 functab startup.obj
+__CFG_WDTE$OFF 0 0 ABS 0 - CpE 3201-LE7-3.obj
+intlevel1 0 0 CODE 0 functab startup.obj
+__size_of__tdiv_to_l_ 0 0 ABS 0 - CpE 3201-LE7-3.obj
+intlevel2 0 0 CODE 0 functab startup.obj
+___lltoft@exp 7D 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+main@LSBT 1B9 0 BANK3 1 cstackBANK3 CpE 3201-LE7-3.obj
+main@MSBT 1BD 0 BANK3 1 cstackBANK3 CpE 3201-LE7-3.obj
+intlevel3 0 0 CODE 0 functab startup.obj
+intlevel4 0 0 CODE 0 functab startup.obj
+__tdiv_to_l_@f2 73 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+intlevel5 0 0 CODE 0 functab startup.obj
+_sprintf$149 A3 0 BANK1 1 cstackBANK1 CpE 3201-LE7-3.obj
+main@msgHumidity 19E 0 BANK3 1 cstackBANK3 CpE 3201-LE7-3.obj
+__div_to_l_@quot 20 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+__HidataBANK3 0 0 ABS 0 idataBANK3 -
+__LidataBANK3 0 0 ABS 0 idataBANK3 -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__pidataBANK3 25A4 0 CODE 0 idataBANK3 CpE 3201-LE7-3.obj
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+__end_of___wmul 2654 0 CODE 0 text11 CpE 3201-LE7-3.obj
+__end_of_I2C_Start 249C 0 CODE 0 text29 CpE 3201-LE7-3.obj
+__CFG_CPD$OFF 0 0 ABS 0 - CpE 3201-LE7-3.obj
+start_initialization FE0 0 CODE 0 cinit CpE 3201-LE7-3.obj
+sprintf@integ B8 0 BANK1 1 cstackBANK1 CpE 3201-LE7-3.obj
+___lldiv@quotient 79 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+___awdiv@quotient 22 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+__size_of___ftge 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__Hmaintext 0 0 ABS 0 maintext -
+__Lmaintext 0 0 ABS 0 maintext -
+__pmaintext 1A1C 0 CODE 0 maintext CpE 3201-LE7-3.obj
+__end_of___fttol 2CD4 0 CODE 0 text15 CpE 3201-LE7-3.obj
+_sprintf$578 A0 0 BANK1 1 cstackBANK1 CpE 3201-LE7-3.obj
+__Hinittext 0 0 ABS 0 inittext -
+__Linittext 0 0 ABS 0 inittext -
+__size_of_sprintf 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__size_of___awmod 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__end_of___ftsub 260E 0 CODE 0 text16 CpE 3201-LE7-3.obj
+__initialization FE0 0 CODE 0 cinit CpE 3201-LE7-3.obj
+__end_of___ftge 2972 0 CODE 0 text19 CpE 3201-LE7-3.obj
+__end_of_initLCD 26EC 0 CODE 0 text21 CpE 3201-LE7-3.obj
+__stringbase 200A 0 STRING 0 strings CpE 3201-LE7-3.obj
+___llmod@dividend 74 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+___awmod@dividend 72 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+__end_of_I2C_Receive 26A0 0 CODE 0 text32 CpE 3201-LE7-3.obj
+sprintf@_val B4 0 BANK1 1 cstackBANK1 CpE 3201-LE7-3.obj
+___bmul@product 25 0 BANK0 1 cstackBANK0 CpE 3201-LE7-3.obj
+___llmod@counter 79 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+___awmod@counter 75 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+___wmul@product 74 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+__CFG_CP$OFF 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__size_of_dataCtrl 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__size_of___ftmul 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__CFG_LVP$OFF 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__size_of___bmul 0 0 ABS 0 - CpE 3201-LE7-3.obj
+__end_of___bmul 257C 0 CODE 0 text6 CpE 3201-LE7-3.obj
+sprintf@c C1 0 BANK1 1 cstackBANK1 CpE 3201-LE7-3.obj
+__end_of___ftdiv 176 0 CODE 0 text26 CpE 3201-LE7-3.obj
+__size_of___llmod 0 0 ABS 0 - CpE 3201-LE7-3.obj
+___lldiv@dividend 74 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+___awdiv@dividend 79 0 COMMON 1 cstackCOMMON CpE 3201-LE7-3.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect in on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 BB 2
+cinit 0 7F0 FE0 19 2
+config 0 2007 400E 1 2
+cstackCOMMON 1 70 70 E 1
+cstackBANK0 1 20 20 4D 1
+cstackBANK1 1 A0 A0 26 1
+cstackBANK3 1 190 190 4A 1
+text2 0 257 4AE 599 2
+maintext 0 D0E 1A1C 2F2 2
+text3 0 A6F 14DE 29F 2
+text4 0 BB 176 19C 2
+text10 0 93D 127A 132 2
+text17 0 834 1068 109 2
+text5 0 172D 2E5A D3 2
+text9 0 166A 2CD4 C3 2
+text15 0 15DC 2BB8 8E 2
+strings 0 1000 2000 7F 2
+text27 0 1574 2AE8 68 2
+text14 0 1516 2A2C 5E 2
+text8 0 14B9 2972 5D 2
+text19 0 145C 28B8 5D 2
+text7 0 140F 281E 4D 2
+text13 0 13C3 2786 4C 2
+text12 0 809 1012 2B 2
+text24 0 139C 2738 27 2
+text1 0 1376 26EC 26 2
+text21 0 1350 26A0 26 2
+text32 0 132A 2654 26 2
+text11 0 1307 260E 23 2
+text16 0 12EB 25D6 1C 2
+idataBANK3 0 12D2 25A4 19 2
+text25 0 12BE 257C 14 2
+text6 0 12AB 2556 13 2
+text22 0 1298 2530 13 2
+text23 0 1285 250A 13 2
+inittext 0 1274 24E8 11 2
+text20 0 1265 24CA F 2
+text18 0 125D 24BA 8 2
+text33 0 1255 24AA 8 2
+text28 0 124E 249C 7 2
+text29 0 1247 248E 7 2
+text31 0 1240 2480 7 2

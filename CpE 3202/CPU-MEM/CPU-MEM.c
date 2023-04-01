@@ -405,11 +405,17 @@ int getBitLength(unsigned data) {
 
 /*======================================================================================================================================================*/
 void MainMemory(void) {
+	unsigned int col, row, cs;
+	unsigned int tempData = 0x00;
 	if (OE) {
-		/* decoding address data */
+		// Decoding address data
 		col = ADDR & 0x001F;
 		row = (ADDR >> 5) & 0x001F;
 		cs = ADDR >> 10;
+		
+		A1[row]
+		
+		
 	}
 	
 	if (IOM == 1) {
@@ -435,98 +441,94 @@ void IOMemory(void) {
 void initMemory(void) {
 	printf("Initializing Main Memory...\n");
 	
-	/* setting the global control signals */
-	IOM=1, RW=1, OE=1;
-	/* Format ADDR=<program memory address>; BUS=<instruction>; MainMemory() */
-	/* Calling MainMemory() writes the instruction to memory */
-	ADDR=0x000; BUS=0x30; MainMemory(); // write to MBR 0x15
-	ADDR=0x001; BUS=0x15; MainMemory();
-	ADDR=0x002; BUS=0x0C; MainMemory(); // write to Main Memory at 0x400
-	ADDR=0x003; BUS=0x00; MainMemory();
+	// Setting the global control signals 
+	IOM = 1, RW = 1, OE = 1;
 	
-	dataMemory[0x000] = 0x30;       	
-    dataMemory[0x001] = 0x15;
-    dataMemory[0x002] = 0x0C;       		
-    dataMemory[0x003] = 0x00;
-    dataMemory[0x004] = 0x30;       		
-    dataMemory[0x005] = 0x05;
-    dataMemory[0x006] = 0x48;     			
-    dataMemory[0x007] = 0x00;
-    dataMemory[0x008] = 0x30;
-    dataMemory[0x009] = 0x08;
-    dataMemory[0x00A] = 0xF0;
-    dataMemory[0x00B] = 0x00;
-    dataMemory[0x00C] = 0x14;
-    dataMemory[0x00D] = 0x00;
-    dataMemory[0x00E] = 0xD8;
-    dataMemory[0x00F] = 0x00;
-    dataMemory[0x010] = 0x58;
-    dataMemory[0x011] = 0x00;
-    dataMemory[0x012] = 0x0C;
-    dataMemory[0x013] = 0x01;
-    dataMemory[0x014] = 0x38;
-    dataMemory[0x015] = 0x0B;
-    dataMemory[0x016] = 0x28;
-    dataMemory[0x017] = 0x00;
-    dataMemory[0x018] = 0x30;
-    dataMemory[0x019] = 0x10;
-    dataMemory[0x01A] = 0xE8;
-    dataMemory[0x01B] = 0x00;
-    dataMemory[0x01C] = 0x58;
-    dataMemory[0x01D] = 0x00;
-    dataMemory[0x01E] = 0x28;       
-    dataMemory[0x01F] = 0x01;
-    dataMemory[0x020] = 0xB0;       
-    dataMemory[0x021] = 0x00;
-    dataMemory[0x022] = 0xB0;       
-    dataMemory[0x023] = 0x00;
-    dataMemory[0x024] = 0x14;      
-    dataMemory[0x025] = 0x01;
-    dataMemory[0x026] = 0xA8;       
-    dataMemory[0x027] = 0x00;
-    dataMemory[0x028] = 0xC8;       
-    dataMemory[0x029] = 0x00;
-    dataMemory[0x02A] = 0xC0;       
-    dataMemory[0x02B] = 0x00;
-    dataMemory[0x02C] = 0x20;       
-    dataMemory[0x02D] = 0x01;
-    dataMemory[0x02E] = 0x70;       
-    dataMemory[0x02F] = 0x00;
-    dataMemory[0x030] = 0xB8;       
-    dataMemory[0x031] = 0x00;
-    dataMemory[0x032] = 0x30;       
-    dataMemory[0x033] = 0xFF;
-    dataMemory[0x034] = 0xD0;      
-    dataMemory[0x035] = 0x00;
-    dataMemory[0x036] = 0x14;       
-    dataMemory[0x037] = 0x01;
-    dataMemory[0x038] = 0xA0;       
-    dataMemory[0x039] = 0x3C;
-    dataMemory[0x03A] = 0x30;       
-    dataMemory[0x03B] = 0xF0;
-    dataMemory[0x03C] = 0x90;       
-    dataMemory[0x03D] = 0x40;
-    dataMemory[0x03E] = 0x88;       
-    dataMemory[0x03F] = 0x44;
-    dataMemory[0x040] = 0x30;       
-    dataMemory[0x041] = 0x00;
-    dataMemory[0x042] = 0x48;       
-    dataMemory[0x043] = 0x00;
-    dataMemory[0x044] = 0x30;       
-    dataMemory[0x045] = 0x03;
-    dataMemory[0x046] = 0x48;      
-    dataMemory[0x047] = 0x00;
-    dataMemory[0x048] = 0x30;       
-    dataMemory[0x049] = 0x00;
-    dataMemory[0x04A] = 0xA0;       
-    dataMemory[0x04B] = 0x52;
-    dataMemory[0x04C] = 0x30;       
-    dataMemory[0x04D] = 0x01;
-    dataMemory[0x04E] = 0xE8;     
-    dataMemory[0x04F] = 0x00;
-    dataMemory[0x050] = 0x18;
-    dataMemory[0x051] = 0x48;
-    dataMemory[0x052] = 0xF8;
+	// Format ADDR=<program memory address>; BUS=<instruction>; MainMemory() 
+	// Calling MainMemory() writes the instruction to memory 
+	ADDR=0x000; BUS=0x30; MainMemory(); 
+	ADDR=0x001; BUS=0x15; MainMemory();
+	ADDR=0x002; BUS=0x0C; MainMemory(); 
+	ADDR=0x003; BUS=0x00; MainMemory();
+	ADDR=0x004; BUS=0x30; MainMemory();
+	ADDR=0x005; BUS=0x05; MainMemory();
+	ADDR=0x006; BUS=0x48; MainMemory();	
+	ADDR=0x007; BUS=0x00; MainMemory();
+	ADDR=0x008; BUS=0x30; MainMemory();
+	ADDR=0x009; BUS=0x08; MainMemory();
+	ADDR=0x00A; BUS=0xF0; MainMemory();
+	ADDR=0x00B; BUS=0x00; MainMemory();
+	ADDR=0x00C; BUS=0x14; MainMemory();
+	ADDR=0x00D; BUS=0x00; MainMemory();
+	ADDR=0x00E; BUS=0xD8; MainMemory();
+	ADDR=0x00F; BUS=0x00; MainMemory();
+	ADDR=0x010; BUS=0x58; MainMemory();
+	ADDR=0x011; BUS=0x00; MainMemory();
+	ADDR=0x012; BUS=0x0C; MainMemory();
+	ADDR=0x013; BUS=0x01; MainMemory();
+	ADDR=0x014; BUS=0x38; MainMemory();
+	ADDR=0x015; BUS=0x0B; MainMemory();
+	ADDR=0x016; BUS=0x28; MainMemory();
+	ADDR=0x017; BUS=0x00; MainMemory();
+	ADDR=0x018; BUS=0x30; MainMemory();
+	ADDR=0x019; BUS=0x10; MainMemory();
+	ADDR=0x01A; BUS=0xE8; MainMemory();
+	ADDR=0x01B; BUS=0x00; MainMemory();
+	ADDR=0x01C; BUS=0x58; MainMemory();
+	ADDR=0x01D; BUS=0x00; MainMemory();
+	ADDR=0x01E; BUS=0x28; MainMemory();
+	ADDR=0x01F; BUS=0x01; MainMemory();
+	ADDR=0x020; BUS=0xB0; MainMemory();
+	ADDR=0x021; BUS=0x00; MainMemory();
+	ADDR=0x022; BUS=0xB0; MainMemory();
+	ADDR=0x023; BUS=0x00; MainMemory();
+	ADDR=0x024; BUS=0x14; MainMemory();
+	ADDR=0x025; BUS=0x01; MainMemory();
+	ADDR=0x026; BUS=0xA8; MainMemory();
+	ADDR=0x027; BUS=0x00; MainMemory();
+	ADDR=0x028; BUS=0xC8; MainMemory();
+	ADDR=0x029; BUS=0x00; MainMemory();
+	ADDR=0x02A; BUS=0xC0; MainMemory();
+	ADDR=0x02B; BUS=0x00; MainMemory();
+	ADDR=0x02C; BUS=0x20; MainMemory();
+	ADDR=0x02D; BUS=0x01; MainMemory();
+	ADDR=0x02E; BUS=0x70; MainMemory();
+	ADDR=0x02F; BUS=0x00; MainMemory();
+	ADDR=0x030; BUS=0xB8; MainMemory();
+	ADDR=0x031; BUS=0x00; MainMemory();
+	ADDR=0x032; BUS=0x30; MainMemory();
+	ADDR=0x033; BUS=0xFF; MainMemory();
+	ADDR=0x034; BUS=0xD0; MainMemory();
+	ADDR=0x035; BUS=0x00; MainMemory();
+	ADDR=0x036; BUS=0x14; MainMemory();
+	ADDR=0x037; BUS=0x01; MainMemory();
+	ADDR=0x038; BUS=0xA0; MainMemory();
+	ADDR=0x039; BUS=0x3C; MainMemory();
+	ADDR=0x03A; BUS=0x30; MainMemory();
+	ADDR=0x03B; BUS=0xF0; MainMemory();
+	ADDR=0x03C; BUS=0x90; MainMemory();
+	ADDR=0x03D; BUS=0x40; MainMemory();
+	ADDR=0x03E; BUS=0x88; MainMemory();
+	ADDR=0x03F; BUS=0x44; MainMemory();
+	ADDR=0x040; BUS=0x30; MainMemory();
+	ADDR=0x041; BUS=0x00; MainMemory();
+	ADDR=0x042; BUS=0x48; MainMemory();
+	ADDR=0x043; BUS=0x00; MainMemory();
+	ADDR=0x044; BUS=0x30; MainMemory();
+	ADDR=0x045; BUS=0x03; MainMemory();
+	ADDR=0x046; BUS=0x48; MainMemory();
+	ADDR=0x047; BUS=0x00; MainMemory();
+	ADDR=0x048; BUS=0x30; MainMemory();
+	ADDR=0x049; BUS=0x00; MainMemory();
+	ADDR=0x04A; BUS=0xA0; MainMemory();
+	ADDR=0x04B; BUS=0x52; MainMemory();
+	ADDR=0x04C; BUS=0x30; MainMemory();
+	ADDR=0x04D; BUS=0x01; MainMemory();
+	ADDR=0x04E; BUS=0xE8; MainMemory();
+	ADDR=0x04F; BUS=0x00; MainMemory();
+	ADDR=0x050; BUS=0x18; MainMemory();
+	ADDR=0x051; BUS=0x48; MainMemory();
+	ADDR=0x052; BUS=0xF8; MainMemory();
 }
 
 /*======================================================================================================================================================*/

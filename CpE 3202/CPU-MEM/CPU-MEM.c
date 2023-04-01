@@ -272,8 +272,6 @@ void printBin(int data, unsigned char data_width) {
 	}
 }
 
-// Arithmetic functions
-
 /*======================================================================================================================================================*/
 unsigned char arithmeticAddition(unsigned char op1, unsigned char op2) {
 	return op1 + op2;
@@ -413,17 +411,28 @@ void MainMemory(void) {
 		row = (ADDR >> 5) & 0x001F;
 		cs = ADDR >> 10;
 		
-		A1[row]
+		if (IOM == 1) {
+			if (RW) { // MEMORY WRITE
+				if (cs) {
+					
+				}
+				else {
+					
+				}
+			}
+			else { // MEMORY READ
+				
+			}
 		
+			if (RW == 0 && OE == 1) 		// memory read
+				BUS = dataMemory[ADDR];
+			else if (RW == 1 && OE == 1) 	// memory write
+				dataMemory[ADDR] = BUS;
+		}
 		
 	}
 	
-	if (IOM == 1) {
-		if (RW == 0 && OE == 1) 		// memory read
-			BUS = dataMemory[ADDR];
-		else if (RW == 1 && OE == 1) 	// memory write
-			dataMemory[ADDR] = BUS;
-	}
+		
 }
 
 /*======================================================================================================================================================*/
@@ -441,11 +450,11 @@ void IOMemory(void) {
 void initMemory(void) {
 	printf("Initializing Main Memory...\n");
 	
-	// Setting the global control signals 
+	/* Setting the global control signals */ 
 	IOM = 1, RW = 1, OE = 1;
 	
-	// Format ADDR=<program memory address>; BUS=<instruction>; MainMemory() 
-	// Calling MainMemory() writes the instruction to memory 
+	/* Format ADDR=<program memory address>; BUS=<instruction>; MainMemory() */
+	/* Calling MainMemory() writes the instruction to memory */
 	ADDR=0x000; BUS=0x30; MainMemory(); 
 	ADDR=0x001; BUS=0x15; MainMemory();
 	ADDR=0x002; BUS=0x0C; MainMemory(); 

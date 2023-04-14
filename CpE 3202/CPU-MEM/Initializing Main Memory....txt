@@ -1,0 +1,775 @@
+Initializing Main Memory...
+
+*************************
+PC              : 0x000
+IR              : 0x3015
+Instruction Code: 0x06
+Operand         : 0x015
+Instruction     : WB
+Loading data to MBR...
+ADDR = 0x0001 MAR = 0x0000 IOAR = 0x0001 MBR = 0x15
+IOBR = 0x00 Fetch = 0 Memory = 0
+IO = 0 IOM = 0 RW = 0 OE = 0
+*************************
+*************************
+PC              : 0x002
+IR              : 0x0C00
+Instruction Code: 0x01
+Operand         : 0x400
+Instruction     : WM
+Writing data to memory...
+ADDR = 0x0400 MAR = 0x0400 IOAR = 0x0001 MBR = 0x15
+IOBR = 0x00 Fetch = 0 Memory = 1
+IO = 0 IOM = 1 RW = 1 OE = 1
+*************************
+*************************
+PC              : 0x004
+IR              : 0x3005
+Instruction Code: 0x06
+Operand         : 0x005
+Instruction     : WB
+Loading data to MBR...
+ADDR = 0x0005 MAR = 0x0400 IOAR = 0x0001 MBR = 0x05
+IOBR = 0x00 Fetch = 0 Memory = 0
+IO = 0 IOM = 0 RW = 0 OE = 0
+*************************
+*************************
+PC              : 0x006
+IR              : 0x4800
+Instruction Code: 0x09
+Operand         : 0x000
+Instruction     : ALU Operation
+Loading data from MBR to BUS...
+-------------------------
+ACC             : 0x00
+BUS             : 0x05
+CONTROL         : 0x09
+Operation       : WACC
+ZF = 0, CF = 0, SF = 0, OF = 0
+ACC             : 0x05
+BUS             : 0x05
+ADDR = 0x0007 MAR = 0x0400 IOAR = 0x0001 MBR = 0x05
+IOBR = 0x00 Fetch = 0 Memory = 1
+IO = 0 IOM = 0 RW = 1 OE = 0
+*************************
+*************************
+PC              : 0x008
+IR              : 0x3008
+Instruction Code: 0x06
+Operand         : 0x008
+Instruction     : WB
+Loading data to MBR...
+ADDR = 0x0009 MAR = 0x0400 IOAR = 0x0001 MBR = 0x08
+IOBR = 0x00 Fetch = 0 Memory = 0
+IO = 0 IOM = 0 RW = 0 OE = 0
+*************************
+*************************
+PC              : 0x00A
+IR              : 0xF000
+Instruction Code: 0x1E
+Operand         : 0x000
+Instruction     : ALU Operation
+Loading data from MBR to BUS...
+-------------------------
+ACC             : 0x05
+BUS             : 0x08
+CONTROL         : 0x1E
+Operation       : ADD
+ZF = 0, CF = 0, SF = 0, OF = 0
+ACC             : 0x0D
+BUS             : 0x08
+ADDR = 0x000B MAR = 0x0400 IOAR = 0x0001 MBR = 0x08
+IOBR = 0x00 Fetch = 0 Memory = 1
+IO = 0 IOM = 0 RW = 1 OE = 0
+*************************
+*************************
+PC              : 0x00C
+IR              : 0x1400
+Instruction Code: 0x02
+Operand         : 0x400
+Instruction     : RM
+Reading data from memory...
+ADDR = 0x0400 MAR = 0x0400 IOAR = 0x0001 MBR = 0x15
+IOBR = 0x00 Fetch = 0 Memory = 1
+IO = 0 IOM = 1 RW = 0 OE = 1
+*************************
+*************************
+PC              : 0x00E
+IR              : 0xD800
+Instruction Code: 0x1B
+Operand         : 0x000
+Instruction     : ALU Operation
+Loading data from MBR to BUS...
+-------------------------
+ACC             : 0x0D
+BUS             : 0x15
+CONTROL         : 0x1B
+Operation       : MUL
+   A        Q     Q_n1    M     n
+00000000 00001101  0   00010101 0
+11110101 10000110  1   00010101 1
+00000101 01000011  0   00010101 2
+11111000 00100001  1   00010101 3
+11111100 00010000  1   00010101 4
+00001000 10001000  0   00010101 5
+00000100 01000100  0   00010101 6
+00000010 00100010  0   00010101 7
+00000001 00010001  0   00010101 8
+ZF = 0, CF = 1, SF = 0, OF = 1
+ACC             : 0x11
+BUS             : 0x15
+ADDR = 0x000F MAR = 0x0400 IOAR = 0x0001 MBR = 0x15
+IOBR = 0x00 Fetch = 0 Memory = 1
+IO = 0 IOM = 0 RW = 1 OE = 0
+*************************
+*************************
+PC              : 0x010
+IR              : 0x5800
+Instruction Code: 0x0B
+Operand         : 0x000
+Instruction     : ALU Operation
+Loading data from MBR to BUS...
+-------------------------
+ACC             : 0x11
+BUS             : 0x15
+CONTROL         : 0x0B
+Operation       : RACC
+ZF = 0, CF = 0, SF = 0, OF = 0
+ACC             : 0x11
+BUS             : 0x11
+ADDR = 0x0011 MAR = 0x0400 IOAR = 0x0001 MBR = 0x11
+IOBR = 0x00 Fetch = 0 Memory = 1
+IO = 0 IOM = 0 RW = 1 OE = 0
+*************************
+*************************
+PC              : 0x012
+IR              : 0x0C01
+Instruction Code: 0x01
+Operand         : 0x401
+Instruction     : WM
+Writing data to memory...
+ADDR = 0x0401 MAR = 0x0401 IOAR = 0x0001 MBR = 0x11
+IOBR = 0x00 Fetch = 0 Memory = 1
+IO = 0 IOM = 1 RW = 1 OE = 1
+*************************
+*************************
+PC              : 0x014
+IR              : 0x380B
+Instruction Code: 0x07
+Operand         : 0x00B
+Instruction     : WIB
+Loading data to IOBR...
+ADDR = 0x0015 MAR = 0x0401 IOAR = 0x0001 MBR = 0x11
+IOBR = 0x0B Fetch = 0 Memory = 0
+IO = 0 IOM = 0 RW = 0 OE = 0
+*************************
+*************************
+PC              : 0x016
+IR              : 0x2800
+Instruction Code: 0x05
+Operand         : 0x000
+Instruction     : WIO
+Writing data to IO...
+ADDR = 0x0000 MAR = 0x0401 IOAR = 0x0000 MBR = 0x11
+IOBR = 0x0B Fetch = 0 Memory = 0
+IO = 1 IOM = 0 RW = 1 OE = 1
+*************************
+*************************
+PC              : 0x018
+IR              : 0x3010
+Instruction Code: 0x06
+Operand         : 0x010
+Instruction     : WB
+Loading data to MBR...
+ADDR = 0x0019 MAR = 0x0401 IOAR = 0x0000 MBR = 0x10
+IOBR = 0x0B Fetch = 0 Memory = 0
+IO = 0 IOM = 0 RW = 0 OE = 0
+*************************
+*************************
+PC              : 0x01A
+IR              : 0xE800
+Instruction Code: 0x1D
+Operand         : 0x000
+Instruction     : ALU Operation
+Loading data from MBR to BUS...
+-------------------------
+ACC             : 0x11
+BUS             : 0x10
+CONTROL         : 0x1D
+Operation       : SUB
+ZF = 0, CF = 0, SF = 0, OF = 0
+ACC             : 0x01
+BUS             : 0x10
+ADDR = 0x001B MAR = 0x0401 IOAR = 0x0000 MBR = 0x10
+IOBR = 0x0B Fetch = 0 Memory = 1
+IO = 0 IOM = 0 RW = 1 OE = 0
+*************************
+*************************
+PC              : 0x01C
+IR              : 0x5800
+Instruction Code: 0x0B
+Operand         : 0x000
+Instruction     : ALU Operation
+Loading data from MBR to BUS...
+-------------------------
+ACC             : 0x01
+BUS             : 0x10
+CONTROL         : 0x0B
+Operation       : RACC
+ZF = 0, CF = 0, SF = 0, OF = 0
+ACC             : 0x01
+BUS             : 0x01
+ADDR = 0x001D MAR = 0x0401 IOAR = 0x0000 MBR = 0x01
+IOBR = 0x0B Fetch = 0 Memory = 1
+IO = 0 IOM = 0 RW = 1 OE = 0
+*************************
+*************************
+PC              : 0x01E
+IR              : 0x2801
+Instruction Code: 0x05
+Operand         : 0x001
+Instruction     : WIO
+Writing data to IO...
+ADDR = 0x0001 MAR = 0x0401 IOAR = 0x0001 MBR = 0x01
+IOBR = 0x0B Fetch = 0 Memory = 0
+IO = 1 IOM = 0 RW = 1 OE = 1
+*************************
+*************************
+PC              : 0x020
+IR              : 0xB000
+Instruction Code: 0x16
+Operand         : 0x000
+Instruction     : ALU Operation
+Loading data from MBR to BUS...
+-------------------------
+ACC             : 00000001
+BUS             : 00000001
+CONTROL         : 0x16
+Operation       : SHL
+ZF = 0, CF = 0, SF = 0, OF = 0
+ACC             : 00000010
+ADDR = 0x0021 MAR = 0x0401 IOAR = 0x0001 MBR = 0x01
+IOBR = 0x0B Fetch = 0 Memory = 1
+IO = 0 IOM = 0 RW = 1 OE = 0
+*************************
+*************************
+PC              : 0x022
+IR              : 0xB000
+Instruction Code: 0x16
+Operand         : 0x000
+Instruction     : ALU Operation
+Loading data from MBR to BUS...
+-------------------------
+ACC             : 00000010
+BUS             : 00000001
+CONTROL         : 0x16
+Operation       : SHL
+ZF = 0, CF = 0, SF = 0, OF = 0
+ACC             : 00000100
+ADDR = 0x0023 MAR = 0x0401 IOAR = 0x0001 MBR = 0x01
+IOBR = 0x0B Fetch = 0 Memory = 1
+IO = 0 IOM = 0 RW = 1 OE = 0
+*************************
+*************************
+PC              : 0x024
+IR              : 0xA800
+Instruction Code: 0x15
+Operand         : 0x000
+Instruction     : ALU Operation
+Loading data from MBR to BUS...
+-------------------------
+ACC             : 00000100
+BUS             : 00000001
+CONTROL         : 0x15
+Operation       : SHR
+ZF = 0, CF = 0, SF = 0, OF = 0
+ACC             : 00000010
+ADDR = 0x0025 MAR = 0x0401 IOAR = 0x0001 MBR = 0x01
+IOBR = 0x0B Fetch = 0 Memory = 1
+IO = 0 IOM = 0 RW = 1 OE = 0
+*************************
+*************************
+PC              : 0x026
+IR              : 0x1401
+Instruction Code: 0x02
+Operand         : 0x401
+Instruction     : RM
+Reading data from memory...
+ADDR = 0x0401 MAR = 0x0401 IOAR = 0x0001 MBR = 0x11
+IOBR = 0x0B Fetch = 0 Memory = 1
+IO = 0 IOM = 1 RW = 0 OE = 1
+*************************
+*************************
+PC              : 0x028
+IR              : 0xC800
+Instruction Code: 0x19
+Operand         : 0x000
+Instruction     : ALU Operation
+Loading data from MBR to BUS...
+-------------------------
+ACC             : 00000010
+BUS             : 00010001
+CONTROL         : 0x19
+Operation       : OR
+ZF = 0, CF = 0, SF = 0, OF = 0
+ACC             : 00010011
+ADDR = 0x0029 MAR = 0x0401 IOAR = 0x0001 MBR = 0x11
+IOBR = 0x0B Fetch = 0 Memory = 1
+IO = 0 IOM = 0 RW = 1 OE = 0
+*************************
+*************************
+PC              : 0x02A
+IR              : 0xC000
+Instruction Code: 0x18
+Operand         : 0x000
+Instruction     : ALU Operation
+Loading data from MBR to BUS...
+-------------------------
+ACC             : 00010011
+BUS             : 00010001
+CONTROL         : 0x18
+Operation       : NOT
+ZF = 0, CF = 0, SF = 0, OF = 0
+ACC             : 11101100
+ADDR = 0x002B MAR = 0x0401 IOAR = 0x0001 MBR = 0x11
+IOBR = 0x0B Fetch = 0 Memory = 1
+IO = 0 IOM = 0 RW = 1 OE = 0
+*************************
+*************************
+PC              : 0x02C
+IR              : 0x2001
+Instruction Code: 0x04
+Operand         : 0x001
+Instruction     : RIO
+Reading data from IO...
+ADDR = 0x0001 MAR = 0x0401 IOAR = 0x0001 MBR = 0x11
+IOBR = 0x0B Fetch = 0 Memory = 0
+IO = 1 IOM = 0 RW = 0 OE = 1
+*************************
+*************************
+PC              : 0x02E
+IR              : 0x7000
+Instruction Code: 0x0E
+Operand         : 0x000
+Instruction     : SWAP
+Swapping data of MBR and IOBR...
+ADDR = 0x002F MAR = 0x0401 IOAR = 0x0001 MBR = 0x0B
+IOBR = 0x11 Fetch = 0 Memory = 0
+IO = 0 IOM = 0 RW = 0 OE = 0
+*************************
+*************************
+PC              : 0x030
+IR              : 0xB800
+Instruction Code: 0x17
+Operand         : 0x000
+Instruction     : ALU Operation
+Loading data from MBR to BUS...
+-------------------------
+ACC             : 11101100
+BUS             : 00001011
+CONTROL         : 0x17
+Operation       : XOR
+ZF = 0, CF = 0, SF = 0, OF = 0
+ACC             : 11100111
+ADDR = 0x0031 MAR = 0x0401 IOAR = 0x0001 MBR = 0x0B
+IOBR = 0x11 Fetch = 0 Memory = 1
+IO = 0 IOM = 0 RW = 1 OE = 0
+*************************
+*************************
+PC              : 0x032
+IR              : 0x30FF
+Instruction Code: 0x06
+Operand         : 0x0FF
+Instruction     : WB
+Loading data to MBR...
+ADDR = 0x0033 MAR = 0x0401 IOAR = 0x0001 MBR = 0xFF
+IOBR = 0x11 Fetch = 0 Memory = 0
+IO = 0 IOM = 0 RW = 0 OE = 0
+*************************
+*************************
+PC              : 0x034
+IR              : 0xD000
+Instruction Code: 0x1A
+Operand         : 0x000
+Instruction     : ALU Operation
+Loading data from MBR to BUS...
+-------------------------
+ACC             : 11100111
+BUS             : 11111111
+CONTROL         : 0x1A
+Operation       : AND
+ZF = 0, CF = 0, SF = 0, OF = 0
+ACC             : 11100111
+ADDR = 0x0035 MAR = 0x0401 IOAR = 0x0001 MBR = 0xFF
+IOBR = 0x11 Fetch = 0 Memory = 1
+IO = 0 IOM = 0 RW = 1 OE = 0
+*************************
+*************************
+PC              : 0x036
+IR              : 0x1401
+Instruction Code: 0x02
+Operand         : 0x401
+Instruction     : RM
+Reading data from memory...
+ADDR = 0x0401 MAR = 0x0401 IOAR = 0x0001 MBR = 0x11
+IOBR = 0x11 Fetch = 0 Memory = 1
+IO = 0 IOM = 1 RW = 0 OE = 1
+*************************
+*************************
+PC              : 0x038
+IR              : 0xA03C
+Instruction Code: 0x14
+Operand         : 0x03C
+Instruction     : ALU Operation
+Loading data from MBR to BUS...
+-------------------------
+ACC             : 0xE7
+BUS             : 0x11
+CONTROL         : 0x14
+Operation       : BRE
+ZF = 0, CF = 0, SF = 0, OF = 0
+ACC             : 0xD6
+BUS             : 0x11
+ADDR = 0x0039 MAR = 0x0401 IOAR = 0x0001 MBR = 0x11
+IOBR = 0x11 Fetch = 0 Memory = 1
+IO = 0 IOM = 0 RW = 1 OE = 0
+*************************
+*************************
+PC              : 0x03A
+IR              : 0x30F0
+Instruction Code: 0x06
+Operand         : 0x0F0
+Instruction     : WB
+Loading data to MBR...
+ADDR = 0x003B MAR = 0x0401 IOAR = 0x0001 MBR = 0xF0
+IOBR = 0x11 Fetch = 0 Memory = 0
+IO = 0 IOM = 0 RW = 0 OE = 0
+*************************
+*************************
+PC              : 0x03C
+IR              : 0x9040
+Instruction Code: 0x12
+Operand         : 0x040
+Instruction     : ALU Operation
+Loading data from MBR to BUS...
+-------------------------
+ACC             : 0xD6
+BUS             : 0xF0
+CONTROL         : 0x12
+Operation       : BRGT
+ZF = 0, CF = 1, SF = 1, OF = 1
+ACC             : 0xE6
+BUS             : 0xF0
+ADDR = 0x003D MAR = 0x0401 IOAR = 0x0001 MBR = 0xF0
+IOBR = 0x11 Fetch = 0 Memory = 1
+IO = 0 IOM = 0 RW = 1 OE = 0
+*************************
+*************************
+PC              : 0x03E
+IR              : 0x8844
+Instruction Code: 0x11
+Operand         : 0x044
+Instruction     : ALU Operation
+Loading data from MBR to BUS...
+-------------------------
+ACC             : 0xE6
+BUS             : 0xF0
+CONTROL         : 0x11
+Operation       : BRLT
+ZF = 0, CF = 1, SF = 1, OF = 1
+ACC             : 0xF6
+BUS             : 0xF0
+ADDR = 0x0044 MAR = 0x0401 IOAR = 0x0001 MBR = 0xF0
+IOBR = 0x11 Fetch = 0 Memory = 1
+IO = 0 IOM = 0 RW = 1 OE = 0
+*************************
+*************************
+PC              : 0x044
+IR              : 0x3003
+Instruction Code: 0x06
+Operand         : 0x003
+Instruction     : WB
+Loading data to MBR...
+ADDR = 0x0045 MAR = 0x0401 IOAR = 0x0001 MBR = 0x03
+IOBR = 0x11 Fetch = 0 Memory = 0
+IO = 0 IOM = 0 RW = 0 OE = 0
+*************************
+*************************
+PC              : 0x046
+IR              : 0x4800
+Instruction Code: 0x09
+Operand         : 0x000
+Instruction     : ALU Operation
+Loading data from MBR to BUS...
+-------------------------
+ACC             : 0xF6
+BUS             : 0x03
+CONTROL         : 0x09
+Operation       : WACC
+ZF = 0, CF = 0, SF = 0, OF = 0
+ACC             : 0x03
+BUS             : 0x03
+ADDR = 0x0047 MAR = 0x0401 IOAR = 0x0001 MBR = 0x03
+IOBR = 0x11 Fetch = 0 Memory = 1
+IO = 0 IOM = 0 RW = 1 OE = 0
+*************************
+*************************
+PC              : 0x048
+IR              : 0x3000
+Instruction Code: 0x06
+Operand         : 0x000
+Instruction     : WB
+Loading data to MBR...
+ADDR = 0x0049 MAR = 0x0401 IOAR = 0x0001 MBR = 0x00
+IOBR = 0x11 Fetch = 0 Memory = 0
+IO = 0 IOM = 0 RW = 0 OE = 0
+*************************
+*************************
+PC              : 0x04A
+IR              : 0xA052
+Instruction Code: 0x14
+Operand         : 0x052
+Instruction     : ALU Operation
+Loading data from MBR to BUS...
+-------------------------
+ACC             : 0x03
+BUS             : 0x00
+CONTROL         : 0x14
+Operation       : BRE
+ZF = 0, CF = 0, SF = 0, OF = 0
+ACC             : 0x03
+BUS             : 0x00
+ADDR = 0x004B MAR = 0x0401 IOAR = 0x0001 MBR = 0x00
+IOBR = 0x11 Fetch = 0 Memory = 1
+IO = 0 IOM = 0 RW = 1 OE = 0
+*************************
+*************************
+PC              : 0x04C
+IR              : 0x3001
+Instruction Code: 0x06
+Operand         : 0x001
+Instruction     : WB
+Loading data to MBR...
+ADDR = 0x004D MAR = 0x0401 IOAR = 0x0001 MBR = 0x01
+IOBR = 0x11 Fetch = 0 Memory = 0
+IO = 0 IOM = 0 RW = 0 OE = 0
+*************************
+*************************
+PC              : 0x04E
+IR              : 0xE800
+Instruction Code: 0x1D
+Operand         : 0x000
+Instruction     : ALU Operation
+Loading data from MBR to BUS...
+-------------------------
+ACC             : 0x03
+BUS             : 0x01
+CONTROL         : 0x1D
+Operation       : SUB
+ZF = 0, CF = 0, SF = 0, OF = 0
+ACC             : 0x02
+BUS             : 0x01
+ADDR = 0x004F MAR = 0x0401 IOAR = 0x0001 MBR = 0x01
+IOBR = 0x11 Fetch = 0 Memory = 1
+IO = 0 IOM = 0 RW = 1 OE = 0
+*************************
+*************************
+PC              : 0x050
+IR              : 0x1848
+Instruction Code: 0x03
+Operand         : 0x048
+Instruction     : BR
+Branching to 0x048 on next cycle.
+ADDR = 0x0051 MAR = 0x0401 IOAR = 0x0001 MBR = 0x01
+IOBR = 0x11 Fetch = 0 Memory = 0
+IO = 0 IOM = 0 RW = 0 OE = 0
+*************************
+*************************
+PC              : 0x048
+IR              : 0x3000
+Instruction Code: 0x06
+Operand         : 0x000
+Instruction     : WB
+Loading data to MBR...
+ADDR = 0x0049 MAR = 0x0401 IOAR = 0x0001 MBR = 0x00
+IOBR = 0x11 Fetch = 0 Memory = 0
+IO = 0 IOM = 0 RW = 0 OE = 0
+*************************
+*************************
+PC              : 0x04A
+IR              : 0xA052
+Instruction Code: 0x14
+Operand         : 0x052
+Instruction     : ALU Operation
+Loading data from MBR to BUS...
+-------------------------
+ACC             : 0x02
+BUS             : 0x00
+CONTROL         : 0x14
+Operation       : BRE
+ZF = 0, CF = 0, SF = 0, OF = 0
+ACC             : 0x02
+BUS             : 0x00
+ADDR = 0x004B MAR = 0x0401 IOAR = 0x0001 MBR = 0x00
+IOBR = 0x11 Fetch = 0 Memory = 1
+IO = 0 IOM = 0 RW = 1 OE = 0
+*************************
+*************************
+PC              : 0x04C
+IR              : 0x3001
+Instruction Code: 0x06
+Operand         : 0x001
+Instruction     : WB
+Loading data to MBR...
+ADDR = 0x004D MAR = 0x0401 IOAR = 0x0001 MBR = 0x01
+IOBR = 0x11 Fetch = 0 Memory = 0
+IO = 0 IOM = 0 RW = 0 OE = 0
+*************************
+*************************
+PC              : 0x04E
+IR              : 0xE800
+Instruction Code: 0x1D
+Operand         : 0x000
+Instruction     : ALU Operation
+Loading data from MBR to BUS...
+-------------------------
+ACC             : 0x02
+BUS             : 0x01
+CONTROL         : 0x1D
+Operation       : SUB
+ZF = 0, CF = 0, SF = 0, OF = 0
+ACC             : 0x01
+BUS             : 0x01
+ADDR = 0x004F MAR = 0x0401 IOAR = 0x0001 MBR = 0x01
+IOBR = 0x11 Fetch = 0 Memory = 1
+IO = 0 IOM = 0 RW = 1 OE = 0
+*************************
+*************************
+PC              : 0x050
+IR              : 0x1848
+Instruction Code: 0x03
+Operand         : 0x048
+Instruction     : BR
+Branching to 0x048 on next cycle.
+ADDR = 0x0051 MAR = 0x0401 IOAR = 0x0001 MBR = 0x01
+IOBR = 0x11 Fetch = 0 Memory = 0
+IO = 0 IOM = 0 RW = 0 OE = 0
+*************************
+*************************
+PC              : 0x048
+IR              : 0x3000
+Instruction Code: 0x06
+Operand         : 0x000
+Instruction     : WB
+Loading data to MBR...
+ADDR = 0x0049 MAR = 0x0401 IOAR = 0x0001 MBR = 0x00
+IOBR = 0x11 Fetch = 0 Memory = 0
+IO = 0 IOM = 0 RW = 0 OE = 0
+*************************
+*************************
+PC              : 0x04A
+IR              : 0xA052
+Instruction Code: 0x14
+Operand         : 0x052
+Instruction     : ALU Operation
+Loading data from MBR to BUS...
+-------------------------
+ACC             : 0x01
+BUS             : 0x00
+CONTROL         : 0x14
+Operation       : BRE
+ZF = 0, CF = 0, SF = 0, OF = 0
+ACC             : 0x01
+BUS             : 0x00
+ADDR = 0x004B MAR = 0x0401 IOAR = 0x0001 MBR = 0x00
+IOBR = 0x11 Fetch = 0 Memory = 1
+IO = 0 IOM = 0 RW = 1 OE = 0
+*************************
+*************************
+PC              : 0x04C
+IR              : 0x3001
+Instruction Code: 0x06
+Operand         : 0x001
+Instruction     : WB
+Loading data to MBR...
+ADDR = 0x004D MAR = 0x0401 IOAR = 0x0001 MBR = 0x01
+IOBR = 0x11 Fetch = 0 Memory = 0
+IO = 0 IOM = 0 RW = 0 OE = 0
+*************************
+*************************
+PC              : 0x04E
+IR              : 0xE800
+Instruction Code: 0x1D
+Operand         : 0x000
+Instruction     : ALU Operation
+Loading data from MBR to BUS...
+-------------------------
+ACC             : 0x01
+BUS             : 0x01
+CONTROL         : 0x1D
+Operation       : SUB
+ZF = 1, CF = 0, SF = 0, OF = 0
+ACC             : 0x00
+BUS             : 0x01
+ADDR = 0x004F MAR = 0x0401 IOAR = 0x0001 MBR = 0x01
+IOBR = 0x11 Fetch = 0 Memory = 1
+IO = 0 IOM = 0 RW = 1 OE = 0
+*************************
+*************************
+PC              : 0x050
+IR              : 0x1848
+Instruction Code: 0x03
+Operand         : 0x048
+Instruction     : BR
+Branching to 0x048 on next cycle.
+ADDR = 0x0051 MAR = 0x0401 IOAR = 0x0001 MBR = 0x01
+IOBR = 0x11 Fetch = 0 Memory = 0
+IO = 0 IOM = 0 RW = 0 OE = 0
+*************************
+*************************
+PC              : 0x048
+IR              : 0x3000
+Instruction Code: 0x06
+Operand         : 0x000
+Instruction     : WB
+Loading data to MBR...
+ADDR = 0x0049 MAR = 0x0401 IOAR = 0x0001 MBR = 0x00
+IOBR = 0x11 Fetch = 0 Memory = 0
+IO = 0 IOM = 0 RW = 0 OE = 0
+*************************
+*************************
+PC              : 0x04A
+IR              : 0xA052
+Instruction Code: 0x14
+Operand         : 0x052
+Instruction     : ALU Operation
+Loading data from MBR to BUS...
+-------------------------
+ACC             : 0x00
+BUS             : 0x00
+CONTROL         : 0x14
+Operation       : BRE
+ZF = 1, CF = 0, SF = 0, OF = 0
+ACC             : 0x00
+BUS             : 0x00
+ADDR = 0x0052 MAR = 0x0401 IOAR = 0x0001 MBR = 0x00
+IOBR = 0x11 Fetch = 0 Memory = 1
+IO = 0 IOM = 0 RW = 1 OE = 0
+*************************
+*************************
+PC              : 0x052
+IR              : 0xF800
+Instruction Code: 0x1F
+Operand         : 0x000
+Instruction     : EOP
+End of program.
+ADDR = 0x0053 MAR = 0x0401 IOAR = 0x0001 MBR = 0x00
+IOBR = 0x11 Fetch = 0 Memory = 0
+IO = 0 IOM = 0 RW = 0 OE = 0
+*************************
+
+Program run successfully!
+
+--------------------------------
+Process exited after 264.2 seconds with return value 0
+Press any key to continue . . .

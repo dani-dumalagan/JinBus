@@ -1,0 +1,25 @@
+ylim([-10 10]); 
+
+%% FFT
+n = length(t);
+fhat = fft(f,n);
+PSD = fhat.*conj(fhat)/n;
+freq = 1/(dt*n)*(0:n);
+L = 1:floor(n/2);
+
+subplot(4,1,2)
+plot(freq(L),PSD(L),'c','LineWidth',1), hold on
+
+%% PSD
+indices = PSD>30;
+PSDclean = PSD.*indices;
+fhat = indices.*fhat;
+ffilt = ifft(fhat);
+
+subplot(4,1,3); 
+plot(freq(L),PSDclean(L),'-','Color',[.5 .1 0],'LineWidth',2.5)
+
+subplot(4,1,4);
+plot(t,fclean,'b','LineWidth',0.5)
+ylim([-10 10]); 
+

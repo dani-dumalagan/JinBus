@@ -13,9 +13,14 @@
 #pragma config CP = OFF
 
 void interrupt ISR(void) {
-int period = 0;
-GIE = 0;
-if 
+	int period = 0;
+	GIE = 0;
+	if (CCP1IF) {
+		CCP1IF = 0; // clears interrupt flag
+		TMR1 = 0; // resets TMR1
+		period = CCPR1/1000;
+		
+	}
 }
 
 void main(void) {

@@ -4,7 +4,7 @@ clear all;
 %% Sample input signal
 dt = 0.0001;
 t = 0:dt:40;
-[f, Fs] = audioread('sample5.m4a'); %128kbps
+[f, Fs] = audioread('sample4.mp3'); %128kbps
 
 
 figure('Name','Testing');
@@ -86,7 +86,7 @@ ylabel("Amplitude")
 
 %% Play sound
 %sound(ffilt,Fs)
-%sound(filtf,Fs)
+sound(filtf,Fs)
 
 % sampling rate = speed
 

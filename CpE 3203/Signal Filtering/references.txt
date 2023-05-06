@@ -1,0 +1,11 @@
+https://www.mathworks.com/help/matlab/ref/freqspace.html
+https://www.apa.org/pubs/highlights/peeps/issue-59#:~:text=Spatial%20frequency%20describes%20the%20periodic,features%20such%20as%20global%20shape.
+https://www.l3harrisgeospatial.com/docs/backgroundfastfouriertransform.html#:~:text=The%20FFT%20decomposes%20an%20image,or%20pattern%20in%20the%20image.
+
+
+
+
+
+Source:
+https://www.koreaboo.com/lists/hd-photos-bts-2021-muster-sowoozoo/
+https://www.mathworks.com/matlabcentral/answers/1498-plotting-frequency-distribution-of-fft2-transformed-image

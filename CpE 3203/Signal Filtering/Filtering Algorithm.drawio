@@ -1,0 +1,34 @@
+<mxfile host="app.diagrams.net" modified="2023-05-09T14:17:46.617Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="rKQEJkS0X5Khj1cbbNwp" version="21.2.9" type="device">
+  <diagram name="Page-1" id="LfdKRjCTav4eH3YvRzvs">
+    <mxGraphModel dx="472" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="86aoG2qWTGyY1Z2abTY--1" value="CHOOSE filter type" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=2;size=30;" vertex="1" parent="1">
+          <mxGeometry x="150" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="86aoG2qWTGyY1Z2abTY--2" value="ENTER filename for sample image" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=2;size=30;" vertex="1" parent="1">
+          <mxGeometry x="140" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="86aoG2qWTGyY1Z2abTY--3" value="READ image file based on entered filename" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="120" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="86aoG2qWTGyY1Z2abTY--4" value="CONVERT sample image to grayscale" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="120" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="86aoG2qWTGyY1Z2abTY--5" value="GET image matrix size [m-by-n]" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="120" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="86aoG2qWTGyY1Z2abTY--6" value="GENERATE two-dimensional frequency vectors for an m-by-n matrix" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="120" y="600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="86aoG2qWTGyY1Z2abTY--8" value="COMPUTE the distance of each pixel from the center" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="120" y="700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="86aoG2qWTGyY1Z2abTY--9" value="COMPUTE the&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="120" y="800" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

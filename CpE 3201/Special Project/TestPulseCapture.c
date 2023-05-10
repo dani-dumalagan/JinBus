@@ -12,28 +12,47 @@
 #pragma config WRT = OFF 
 #pragma config CP = OFF
 
+int pulseCount = 0;
+
+void delay_102ms() { // 1ms = 125
+	T1CON = 0x31; // 1:8 prescaler, internal clock
+	TMR1H = 0xCE; // 52785
+	TMR1L = 0x31;
+	GIE = 1;          //Enable Global Interrupt
+    PEIE = 1;         //Enable the Peripheral Interrupt
+    TMR1ON = 1;
+	while (!TMR1IF); // wait until timer expires
+	TMR1IF = 0; // clear flaG
+}
+
 void interrupt ISR(void) {
-	int period = 0;
-	GIE = 0;
-	if (CCP1IF) {
-		CCP1IF = 0; // clears interrupt flag
-		TMR1 = 0; // resets TMR1
-		period = CCPR1/1000;
+	GIE = 0; // disables all unmasked interrupts to prevent interrupt overlap
+	if (INTF) { // check the interrupt flag for RB0/INT
+		INTF = 0; // clears the interrupt flag
 		
+		/* write the interrupt service routine here
+		for RB0/INT external interrupt */
 	}
+	else if (T0IF) { // check the interrupt flag for Timer0
+		T0IF = 0; // clears the interrupt flag
+		
+		/* write the interrupt service routine here
+		for Timer0 overflow interrupt */
+	}
+	GIE = 1; // enable interrupts again
 }
 
 void main(void) {
-	TRISC = 0x04; // set RC2 to input
-	T1CON = 0x30; // 1:8 prescaler; Timer1 off
-	CCP1CON = 0x05; // capture mode: every rising edge
-	CCP1IE = 1; // enable TMR1/CCP1 match interrupt (PIE1 reg)
-	CCP1IF = 0; // reset interrupt flag (PIR1 reg)
-	PEIE = 1; // enable all peripheral interrupt (INTCON reg)
-	GIE = 1; // enable all unmasked interrupts (INTCON reg)
-	TMR1ON = 1; // Turns on Timer1 (T1CON reg)
+	TRISD = 0xFF;
+//	TMR1CS = 0x00;            //Timer1 clock source is instruction clock (FOSC/4)
 	
-	while(1) {
-		
-	}	
+	for(;;) {
+		if (PORTD0 == 0) {
+			while (PORTD0 == 0) { // counting falling edges
+				pulseCount++;
+				delay_ms(101);
+			}
+			
+		}
+	}
 }
